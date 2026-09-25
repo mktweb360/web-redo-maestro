@@ -77,14 +77,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Pingolino Handmade — Propuesta de rediseño" },
+      { name: "description", content: "Propuesta visual para renovar la tienda online de Pingolino Handmade." },
+      { name: "author", content: "Pingolino Handmade" },
+      { property: "og:title", content: "Pingolino Handmade — Propuesta de rediseño" },
+      { property: "og:description", content: "Una nueva experiencia digital para una marca hecha puntada a puntada." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {

@@ -1,6 +1,7 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@400;500;600&display=swap");
 
 @custom-variant dark (&:is(.dark *));
 
@@ -19,6 +20,8 @@
  */
 
 @theme inline {
+  --font-sans: "Work Sans", sans-serif;
+  --font-display: "Instrument Serif", serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -62,24 +65,24 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --radius: 0.25rem;
+  --background: oklch(0.975 0.009 92);
+  --foreground: oklch(0.235 0.025 144);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
+  --primary: oklch(0.39 0.062 145);
+  --primary-foreground: oklch(0.98 0.008 90);
   --secondary: oklch(0.968 0.007 247.896);
   --secondary-foreground: oklch(0.208 0.042 265.755);
   --muted: oklch(0.968 0.007 247.896);
   --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --accent: oklch(0.61 0.115 38);
+  --accent-foreground: oklch(0.98 0.008 90);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
+  --border: oklch(0.85 0.025 100);
   --input: oklch(0.929 0.013 255.508);
   --ring: oklch(0.704 0.04 256.788);
   --chart-1: oklch(0.646 0.222 41.116);
@@ -140,5 +143,158 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    margin: 0;
+    overflow: hidden;
   }
+
+  button { font: inherit; }
 }
+
+@layer components {
+  .presentation-shell { @apply relative h-screen min-h-[620px] overflow-hidden bg-background text-foreground; }
+  .presentation-header { @apply absolute inset-x-0 top-0 z-40 flex h-20 items-center justify-between px-6 md:px-10; }
+  .brand-button { @apply flex items-center gap-3 bg-transparent text-left; }
+  .brand-mark { @apply grid size-9 place-items-center rounded-full border border-current font-display text-xl italic; }
+  .brand-button strong { @apply block text-xs font-semibold uppercase; }
+  .brand-button small { @apply block text-[10px] text-muted-foreground; }
+  .header-meta { @apply flex items-center gap-4; }
+  .slide-label { @apply font-mono text-[10px] text-muted-foreground; }
+  .icon-button { @apply grid size-10 place-items-center rounded-full border border-border bg-background/80 text-foreground transition-colors hover:bg-foreground hover:text-background disabled:cursor-not-allowed disabled:opacity-30; }
+  .progress-track { @apply absolute left-0 right-0 top-20 z-40 h-px bg-border; }
+  .progress-bar { @apply h-full bg-accent transition-all duration-500; }
+  .slide-menu { @apply absolute right-5 top-20 z-50 w-[min(360px,calc(100%-40px))] border border-border bg-background p-5 shadow-2xl; }
+  .slide-menu > p { @apply mb-3 text-[10px] font-semibold uppercase text-muted-foreground; }
+  .slide-menu button { @apply flex w-full gap-4 border-t border-border bg-transparent py-2.5 text-left text-sm hover:text-accent; }
+  .slide-menu button span { @apply font-mono text-[10px] text-muted-foreground; }
+  .slide-menu button.active { @apply text-accent; }
+  .slide-stage { @apply h-full; }
+  .slide { @apply relative h-full min-h-0 overflow-hidden px-6 pb-20 pt-24 md:px-10; animation: slide-in .45s ease-out both; }
+  .content-slide { @apply flex flex-col; }
+  .presentation-footer { @apply absolute inset-x-0 bottom-0 z-40 flex h-16 items-center justify-between px-6 md:px-10; }
+  .footer-note { @apply hidden text-[10px] uppercase text-muted-foreground sm:block; }
+  .nav-controls { @apply ml-auto flex items-center gap-2; }
+  .next-button { @apply inline-flex h-10 items-center gap-2 rounded-full bg-foreground px-5 text-xs font-semibold uppercase text-background transition-colors hover:bg-accent disabled:cursor-not-allowed disabled:opacity-30; }
+  .eyebrow { @apply mb-3 flex items-center gap-3 text-[10px] font-semibold uppercase text-muted-foreground; }
+  .eyebrow span { @apply text-accent; }
+  .slide-heading h2 { @apply font-display text-[clamp(2.5rem,5.4vw,5.5rem)] leading-[0.9]; }
+  .slide-heading h2 em { @apply font-normal text-accent; }
+  .slide-heading.compact h2 { @apply text-[clamp(2.3rem,4.7vw,4.6rem)]; }
+  .inline-heading { @apply grid grid-cols-1 items-end gap-4 md:grid-cols-[1.4fr_.6fr]; }
+  .inline-heading > p { @apply max-w-md pb-1 text-sm leading-relaxed text-muted-foreground; }
+
+  .cover-slide { @apply p-0; }
+  .cover-image { @apply absolute inset-0 h-full w-full object-cover object-center; }
+  .cover-shade { @apply absolute inset-0 bg-foreground/55; }
+  .cover-copy { @apply absolute bottom-[16%] left-6 z-10 max-w-4xl text-primary-foreground md:left-10; }
+  .proposal-tag { @apply mb-5 inline-block border-b border-primary-foreground/50 pb-2 text-[10px] font-semibold uppercase; }
+  .cover-copy h1 { @apply font-display text-[clamp(4.2rem,11vw,10rem)] leading-[0.76]; }
+  .cover-copy h1 em { @apply text-[1.05em] font-normal text-[oklch(0.82_0.09_67)]; }
+  .cover-copy p { @apply mt-7 max-w-xl text-sm leading-relaxed text-primary-foreground/80 md:text-base; }
+  .cover-cta { @apply mt-6 inline-flex items-center gap-3 border-b border-current bg-transparent pb-2 text-xs font-semibold uppercase; }
+  .cover-caption { @apply absolute bottom-5 right-6 z-10 flex flex-col text-right text-[9px] uppercase text-primary-foreground/70 md:right-10; }
+
+  .audit-slide { @apply gap-7; }
+  .audit-grid { @apply grid min-h-0 flex-1 grid-cols-1 gap-5 md:grid-cols-[.85fr_1.15fr]; }
+  .audit-image-wrap { @apply relative min-h-0 overflow-hidden; }
+  .audit-image-wrap img { @apply h-full w-full object-cover; }
+  .image-note { @apply absolute bottom-3 left-3 bg-background px-3 py-2 text-[9px] uppercase; }
+  .audit-findings { @apply grid min-h-0 content-center; }
+  .finding { @apply grid grid-cols-[42px_1fr] gap-3 border-t border-border py-3; }
+  .finding > span { @apply font-mono text-[10px] text-accent; }
+  .finding strong { @apply text-sm; }
+  .finding p { @apply mt-1 text-xs leading-relaxed text-muted-foreground; }
+  .finding.positive { @apply border-primary; }
+  .audit-stat { @apply mt-3 flex items-end gap-4 bg-primary p-4 text-primary-foreground; }
+  .audit-stat strong { @apply font-display text-5xl font-normal; }
+  .audit-stat span { @apply max-w-xs text-xs leading-relaxed; }
+
+  .essence-slide { @apply gap-6; }
+  .essence-layout { @apply grid min-h-0 flex-1 grid-cols-1 gap-8 md:grid-cols-[.85fr_1.15fr]; }
+  .manifesto { @apply flex flex-col justify-end border-l border-accent pl-5; }
+  .manifesto > p { @apply max-w-sm text-sm text-muted-foreground; }
+  .manifesto blockquote { @apply mt-5 max-w-lg font-display text-3xl leading-tight md:text-4xl; }
+  .pillar-list { @apply flex flex-col justify-center; }
+  .pillar { @apply grid grid-cols-[38px_1fr] gap-3 border-t border-border py-3; }
+  .pillar > span { @apply font-mono text-[10px] text-accent; }
+  .pillar h3 { @apply font-display text-2xl; }
+  .pillar p { @apply mt-1 text-xs leading-relaxed text-muted-foreground; }
+  .audience-strip { @apply flex flex-wrap items-center gap-3 border-y border-border py-3 text-[10px] uppercase; }
+  .audience-strip > span { @apply mr-auto text-muted-foreground; }
+  .audience-strip i { @apply size-1 rounded-full bg-accent; }
+
+  .direction-slide { @apply gap-7; }
+  .direction-grid { @apply grid min-h-0 flex-1 grid-cols-1 gap-3 md:grid-cols-[1.1fr_.8fr_1.1fr]; }
+  .palette-panel, .type-panel { @apply flex min-h-[180px] flex-col border border-border p-4; }
+  .panel-label { @apply mb-auto text-[9px] font-semibold uppercase text-muted-foreground; }
+  .swatches { @apply mt-4 grid flex-1 grid-cols-4; }
+  .swatch { @apply flex items-end p-2 text-[8px] uppercase; }
+  .swatch.ink { @apply bg-foreground text-background; }.swatch.sage { @apply bg-primary text-primary-foreground; }.swatch.clay { @apply bg-accent text-accent-foreground; }.swatch.milk { @apply bg-secondary text-foreground; }
+  .type-serif { @apply font-display text-[clamp(2.2rem,4vw,4.5rem)] leading-none; }
+  .type-sans { @apply mt-4 text-[10px] font-semibold; }
+  .type-panel p { @apply mt-2 text-[9px] text-muted-foreground; }
+  .photo-panel { @apply relative min-h-[210px] overflow-hidden; }
+  .photo-panel img { @apply h-full w-full object-cover; }
+  .photo-panel span { @apply absolute bottom-3 left-3 right-3 bg-background/90 p-2 text-[9px] uppercase; }
+
+  .homepage-slide { @apply gap-5; }
+  .homepage-composition { @apply grid min-h-0 flex-1 grid-cols-1 gap-4 md:grid-cols-[1.35fr_.65fr]; }
+  .browser-mockup { @apply flex min-h-0 flex-col overflow-hidden border border-foreground/20 bg-foreground; }
+  .browser-bar { @apply flex h-8 shrink-0 items-center gap-1.5 bg-background px-3; }
+  .browser-bar span { @apply size-1.5 rounded-full bg-border; }.browser-bar b { @apply mx-auto text-[8px]; }
+  .mock-hero { @apply relative min-h-0 flex-1 overflow-hidden; }
+  .mock-hero img { @apply h-full w-full object-cover; }
+  .mock-hero::after { content:""; @apply absolute inset-0 bg-foreground/45; }
+  .mock-overlay { @apply absolute bottom-[12%] left-[6%] z-10 max-w-[65%] text-primary-foreground; }
+  .mock-overlay small { @apply text-[7px] font-semibold; }.mock-overlay h3 { @apply mt-2 font-display text-[clamp(1.8rem,4vw,4rem)] leading-none; }.mock-overlay p { @apply mt-2 max-w-sm text-[9px] leading-relaxed; }.mock-overlay button { @apply mt-3 bg-primary-foreground px-3 py-2 text-[7px] font-semibold text-foreground; }
+  .journey-list { @apply flex flex-col justify-center; }
+  .journey-list li { @apply grid grid-cols-[38px_1fr] gap-2 border-t border-border py-3; }
+  .journey-list li > span { @apply font-mono text-[9px] text-accent; }.journey-list strong { @apply text-sm; }.journey-list p { @apply mt-1 text-xs leading-relaxed text-muted-foreground; }
+
+  .shop-slide { @apply gap-5; }
+  .product-grid { @apply grid min-h-0 flex-1 grid-cols-3 gap-3; }
+  .product-card { @apply flex min-w-0 flex-col; }
+  .product-image { @apply relative min-h-0 flex-1 overflow-hidden bg-secondary; }
+  .product-image img { @apply h-full w-full object-cover; }.product-image > span { @apply absolute right-2 top-2 bg-background px-2 py-1 font-mono text-[8px]; }
+  .product-card > p { @apply mt-2 text-[8px] uppercase text-muted-foreground; }.product-card h3 { @apply mt-1 truncate font-display text-lg md:text-2xl; }.product-card > div:last-child { @apply mt-auto flex items-center justify-between border-t border-border pt-2; }.product-card strong { @apply text-xs; }.product-card button { @apply grid size-7 place-items-center rounded-full bg-foreground text-background; }
+  .trust-row { @apply grid grid-cols-2 gap-2 border-t border-border pt-3 text-[9px] uppercase md:grid-cols-4; }.trust-row span { @apply flex items-center gap-2; }.trust-row svg { @apply text-accent; }
+
+  .story-slide { @apply grid grid-cols-1 p-0 pt-20 md:grid-cols-[.9fr_1.1fr]; }
+  .story-photo { @apply relative min-h-[28vh] overflow-hidden; }.story-photo img { @apply h-full w-full object-cover; }.story-photo span { @apply absolute bottom-4 left-4 bg-background px-3 py-2 text-[9px] uppercase; }
+  .story-copy { @apply flex flex-col justify-center px-7 pb-16 pt-6 md:px-[8vw]; }.story-copy h2 { @apply font-display text-[clamp(2.6rem,5.5vw,5.5rem)] leading-[.9]; }.story-copy h2 em { @apply text-accent; }.story-copy p { @apply mt-3 max-w-xl text-xs leading-relaxed text-muted-foreground; }.story-copy .lead { @apply mt-5 text-sm font-medium text-foreground; }.story-copy blockquote { @apply mt-5 border-l border-accent pl-4 font-display text-xl italic; }
+
+  .voice-slide { @apply gap-5; }
+  .rewrite-table { @apply mx-auto w-full max-w-5xl; }
+  .rewrite-head, .rewrite-row { @apply grid grid-cols-[.8fr_1.2fr] gap-5; }.rewrite-head { @apply border-b border-foreground pb-2 text-[9px] uppercase text-muted-foreground; }.rewrite-row { @apply items-center border-b border-border py-3; }.rewrite-row > span { @apply text-xs text-muted-foreground line-through; }.rewrite-row strong { @apply font-display text-xl font-normal md:text-2xl; }
+  .tone-note { @apply ml-auto max-w-xl border-l border-accent pl-4 text-xs leading-relaxed text-muted-foreground; }
+
+  .conversion-slide { @apply gap-5; }
+  .conversion-kpi { @apply flex items-end gap-3 border-b border-accent pb-2; }.conversion-kpi strong { @apply font-display text-5xl font-normal text-accent; }.conversion-kpi span { @apply max-w-48 pb-1 text-[9px] uppercase; }
+  .conversion-grid { @apply grid flex-1 grid-cols-2 border-l border-t border-border md:grid-cols-4; }.conversion-item { @apply border-b border-r border-border p-4; }.conversion-item > span { @apply font-mono text-[9px] text-accent; }.conversion-item h3 { @apply mt-4 font-display text-xl md:text-2xl; }.conversion-item p { @apply mt-2 text-[10px] leading-relaxed text-muted-foreground; }
+  .mobile-flow { @apply flex items-center justify-between text-[8px] font-semibold uppercase; }.mobile-flow i { @apply h-px flex-1 bg-border; }
+
+  .roadmap-slide { @apply grid grid-cols-1 gap-6 pt-28 md:grid-cols-[.7fr_1.3fr]; }
+  .roadmap-intro { @apply flex flex-col justify-center; }.roadmap-intro h2 { @apply font-display text-[clamp(3rem,6vw,6rem)] leading-[.88]; }.roadmap-intro h2 em { @apply text-accent; }.roadmap-intro > p { @apply mt-6 max-w-md text-sm leading-relaxed text-muted-foreground; }
+  .roadmap-steps { @apply grid grid-cols-2 border-l border-t border-border; }.roadmap-steps > div { @apply border-b border-r border-border p-4 md:p-6; }.roadmap-steps span { @apply text-[8px] font-semibold uppercase text-accent; }.roadmap-steps h3 { @apply mt-4 font-display text-3xl md:text-4xl; }.roadmap-steps p { @apply mt-2 text-[10px] leading-relaxed text-muted-foreground; }
+  .closing-statement { @apply absolute bottom-20 left-6 right-6 flex items-end gap-4 border-t border-foreground pt-3 md:left-[calc(35%+2.5rem)] md:right-10; }.closing-statement span { @apply text-[9px] uppercase text-muted-foreground; }.closing-statement p { @apply max-w-lg text-xs; }.closing-statement strong { @apply ml-auto text-[10px] uppercase; }
+}
+
+@keyframes slide-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 767px) {
+  .presentation-shell { min-height: 560px; }
+  .slide { overflow-y: auto; }
+  .slide-heading h2, .slide-heading.compact h2 { font-size: clamp(2.1rem, 11vw, 3.5rem); }
+  .direction-grid { grid-template-columns: 1fr 1fr; }
+  .photo-panel { grid-column: 1 / -1; min-height: 160px; }
+  .audit-grid, .homepage-composition, .essence-layout { grid-template-columns: 1fr; }
+  .audit-image-wrap { min-height: 180px; }
+  .product-grid { min-height: 340px; }
+  .product-card h3 { white-space: normal; font-size: .95rem; line-height: 1.05; }
+  .story-slide { overflow-y: auto; }
+  .roadmap-slide { overflow-y: auto; padding-bottom: 9rem; }
+  .closing-statement { position: static; align-items: start; flex-direction: column; }
+  .closing-statement strong { margin-left: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) { .slide { animation: none; } .progress-bar { transition: none; } }
