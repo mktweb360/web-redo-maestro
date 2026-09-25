@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, Check, Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import bolsa from "@/assets/pingolino/bolsa-playa.jpg";
 import corona from "@/assets/pingolino/corona.jpg";
 import materiales from "@/assets/pingolino/materiales.jpg";
@@ -101,7 +101,7 @@ function Index() {
   );
 }
 
-function Eyebrow({ number, children }: { number: string; children: React.ReactNode }) {
+function Eyebrow({ number, children }: { number: string; children: ReactNode }) {
   return <div className="eyebrow"><span>{number}</span>{children}</div>;
 }
 
