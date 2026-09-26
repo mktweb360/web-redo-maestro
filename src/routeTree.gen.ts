@@ -9,38 +9,199 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as ContactoRouteImport } from './routes/contacto'
+import { Route as EnviosRouteImport } from './routes/envios'
+import { Route as NosotrosRouteImport } from './routes/nosotros'
 import { Route as PropuestaRouteImport } from './routes/propuesta'
+import { Route as TiendaRouteImport } from './routes/tienda'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as TiendaIndexRouteImport } from './routes/tienda.index'
+import { Route as TiendaSlugRouteImport } from './routes/tienda.$slug'
 
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactoRoute = ContactoRouteImport.update({
+  id: '/contacto',
+  path: '/contacto',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnviosRoute = EnviosRouteImport.update({
+  id: '/envios',
+  path: '/envios',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NosotrosRoute = NosotrosRouteImport.update({
+  id: '/nosotros',
+  path: '/nosotros',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PropuestaRoute = PropuestaRouteImport.update({
   id: '/propuesta',
   path: '/propuesta',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TiendaRoute = TiendaRouteImport.update({
+  id: '/tienda',
+  path: '/tienda',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => BlogRoute,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => BlogRoute,
+} as any)
+const TiendaIndexRoute = TiendaIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => TiendaRoute,
+} as any)
+const TiendaSlugRoute = TiendaSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => TiendaRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
+  '/': typeof IndexRoute
+  '/blog': typeof BlogRouteWithChildren
+  '/contacto': typeof ContactoRoute
+  '/envios': typeof EnviosRoute
+  '/nosotros': typeof NosotrosRoute
   '/propuesta': typeof PropuestaRoute
+  '/tienda': typeof TiendaRouteWithChildren
+  '/blog/$slug': typeof BlogSlugRoute
+  '/tienda/$slug': typeof TiendaSlugRoute
+  '/blog/': typeof BlogIndexRoute
+  '/tienda/': typeof TiendaIndexRoute
 }
 export interface FileRoutesByTo {
+  '/': typeof IndexRoute
+  '/contacto': typeof ContactoRoute
+  '/envios': typeof EnviosRoute
+  '/nosotros': typeof NosotrosRoute
   '/propuesta': typeof PropuestaRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/tienda/$slug': typeof TiendaSlugRoute
+  '/blog': typeof BlogIndexRoute
+  '/tienda': typeof TiendaIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
+  '/': typeof IndexRoute
+  '/blog': typeof BlogRouteWithChildren
+  '/contacto': typeof ContactoRoute
+  '/envios': typeof EnviosRoute
+  '/nosotros': typeof NosotrosRoute
   '/propuesta': typeof PropuestaRoute
+  '/tienda': typeof TiendaRouteWithChildren
+  '/blog/$slug': typeof BlogSlugRoute
+  '/tienda/$slug': typeof TiendaSlugRoute
+  '/blog/': typeof BlogIndexRoute
+  '/tienda/': typeof TiendaIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/propuesta'
+  fullPaths:
+    | '/'
+    | '/blog'
+    | '/contacto'
+    | '/envios'
+    | '/nosotros'
+    | '/propuesta'
+    | '/tienda'
+    | '/blog/$slug'
+    | '/tienda/$slug'
+    | '/blog/'
+    | '/tienda/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/propuesta'
-  id: '__root__' | '/propuesta'
+  to:
+    | '/'
+    | '/contacto'
+    | '/envios'
+    | '/nosotros'
+    | '/propuesta'
+    | '/blog/$slug'
+    | '/tienda/$slug'
+    | '/blog'
+    | '/tienda'
+  id:
+    | '__root__'
+    | '/'
+    | '/blog'
+    | '/contacto'
+    | '/envios'
+    | '/nosotros'
+    | '/propuesta'
+    | '/tienda'
+    | '/blog/$slug'
+    | '/tienda/$slug'
+    | '/blog/'
+    | '/tienda/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
+  IndexRoute: typeof IndexRoute
+  BlogRoute: typeof BlogRouteWithChildren
+  ContactoRoute: typeof ContactoRoute
+  EnviosRoute: typeof EnviosRoute
+  NosotrosRoute: typeof NosotrosRoute
   PropuestaRoute: typeof PropuestaRoute
+  TiendaRoute: typeof TiendaRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contacto': {
+      id: '/contacto'
+      path: '/contacto'
+      fullPath: '/contacto'
+      preLoaderRoute: typeof ContactoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/envios': {
+      id: '/envios'
+      path: '/envios'
+      fullPath: '/envios'
+      preLoaderRoute: typeof EnviosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nosotros': {
+      id: '/nosotros'
+      path: '/nosotros'
+      fullPath: '/nosotros'
+      preLoaderRoute: typeof NosotrosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/propuesta': {
       id: '/propuesta'
       path: '/propuesta'
@@ -48,11 +209,77 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PropuestaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tienda': {
+      id: '/tienda'
+      path: '/tienda'
+      fullPath: '/tienda'
+      preLoaderRoute: typeof TiendaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/tienda/': {
+      id: '/tienda/'
+      path: '/'
+      fullPath: '/tienda/'
+      preLoaderRoute: typeof TiendaIndexRouteImport
+      parentRoute: typeof TiendaRoute
+    }
+    '/tienda/$slug': {
+      id: '/tienda/$slug'
+      path: '/$slug'
+      fullPath: '/tienda/$slug'
+      preLoaderRoute: typeof TiendaSlugRouteImport
+      parentRoute: typeof TiendaRoute
+    }
   }
 }
 
+interface BlogRouteChildren {
+  BlogSlugRoute: typeof BlogSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
+}
+
+const BlogRouteChildren: BlogRouteChildren = {
+  BlogSlugRoute: BlogSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
+}
+
+const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
+
+interface TiendaRouteChildren {
+  TiendaSlugRoute: typeof TiendaSlugRoute
+  TiendaIndexRoute: typeof TiendaIndexRoute
+}
+
+const TiendaRouteChildren: TiendaRouteChildren = {
+  TiendaSlugRoute: TiendaSlugRoute,
+  TiendaIndexRoute: TiendaIndexRoute,
+}
+
+const TiendaRouteWithChildren =
+  TiendaRoute._addFileChildren(TiendaRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
+  IndexRoute: IndexRoute,
+  BlogRoute: BlogRouteWithChildren,
+  ContactoRoute: ContactoRoute,
+  EnviosRoute: EnviosRoute,
+  NosotrosRoute: NosotrosRoute,
   PropuestaRoute: PropuestaRoute,
+  TiendaRoute: TiendaRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
