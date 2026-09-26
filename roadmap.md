@@ -12,3 +12,4 @@
 - [x] Crear páginas SEO independientes para cada categoría y enlazarlas desde la tienda
 - [x] Verificar navegación, metadatos y diseño en escritorio y móvil
 - [x] Recuperar el texto original de portada y corregir el encuadre sin tapar el producto
+- [x] Cambiar categorías y productos a URLs SEO planas y conservar redirecciones permanentes

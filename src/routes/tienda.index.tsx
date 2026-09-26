@@ -41,7 +41,7 @@ function Shop() {
           <div className="flex flex-wrap gap-2">
              <Link to="/tienda" className="border-b border-foreground px-1 py-2 text-xs font-medium uppercase tracking-[0.12em] text-foreground">Todo</Link>
              {shopCategories.map((category) => (
-               <Link key={category.slug} to="/tienda/categoria/$categoria" params={{ categoria: category.slug }}
+               <Link key={category.slug} to="/$slug" params={{ slug: category.slug }}
                  className="border-b border-transparent px-1 py-2 text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground hover:border-border hover:text-foreground">
                  {category.name}
                </Link>

@@ -3,7 +3,7 @@ import { formatPrice, type Product } from "@/lib/catalog";
 
 export function ProductCard({ product }: { product: Product }) {
   return (
-    <Link to="/tienda/$slug" params={{ slug: product.slug }} className="group block min-w-0">
+    <Link to="/$slug" params={{ slug: product.slug }} className="group block min-w-0">
       <div className="relative aspect-[4/5] overflow-hidden bg-muted">
         <img src={product.images[0]} alt={product.name} loading="lazy" className="h-full w-full object-cover transition duration-1000 ease-out group-hover:scale-[1.035]" />
         {product.images[1] && (
