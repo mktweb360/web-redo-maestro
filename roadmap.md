@@ -10,4 +10,4 @@
 - [x] Adaptar la cabecera de inicio a la referencia visual aportada
 - [x] Colocar el logo a la izquierda y la navegación a la derecha
 - [x] Crear páginas SEO independientes para cada categoría y enlazarlas desde la tienda
-- [ ] Verificar navegación, metadatos y diseño en escritorio y móvil
+- [x] Verificar navegación, metadatos y diseño en escritorio y móvil
