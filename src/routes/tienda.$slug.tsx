@@ -3,7 +3,7 @@ import { Check, Minus, Plus } from "lucide-react";
 import { useState } from "react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { ProductCard } from "@/components/site/ProductCard";
-import { formatPrice, getProduct, products } from "@/lib/catalog";
+import { formatPrice, getCategoryByName, getProduct, products } from "@/lib/catalog";
 import { useCart } from "@/lib/cart";
 
 export const Route = createFileRoute("/tienda/$slug")({
@@ -48,6 +48,7 @@ function ProductPage() {
   const [qty, setQty] = useState(1);
   const [name, setName] = useState("");
   const cart = useCart();
+  const category = getCategoryByName(p.category);
   const related = products.filter((x) => x.slug !== p.slug && x.category === p.category).concat(products.filter((x) => x.category !== p.category)).slice(0, 4);
   const [lead, ...rest] = p.description;
   const bullets = rest.filter((t) => t.length < 70);
@@ -57,7 +58,7 @@ function ProductPage() {
     <SiteLayout>
       <div className="mx-auto max-w-7xl px-5 py-10 lg:px-8 lg:py-14">
         <nav className="text-[10px] font-medium uppercase tracking-[0.14em] text-muted-foreground">
-          <Link to="/">Inicio</Link> / <Link to="/tienda">Tienda</Link> / <Link to="/tienda" search={{ categoria: p.category }}>{p.category}</Link>
+           <Link to="/">Inicio</Link> / <Link to="/tienda">Tienda</Link> / {category ? <Link to="/tienda/categoria/$categoria" params={{ categoria: category.slug }}>{p.category}</Link> : p.category}
         </nav>
         <div className="mt-8 grid gap-12 lg:grid-cols-[1.12fr_.88fr] lg:gap-20">
           <div>

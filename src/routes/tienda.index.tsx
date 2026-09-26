@@ -1,12 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { z } from "zod";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { ProductCard } from "@/components/site/ProductCard";
-import { categories, products } from "@/lib/catalog";
+import { products, shopCategories } from "@/lib/catalog";
 
 export const Route = createFileRoute("/tienda/")({
-  validateSearch: z.object({ categoria: z.string().optional() }),
   head: () => ({
     meta: [
       { title: "Tienda — Pingolino Handmade" },
@@ -14,16 +12,17 @@ export const Route = createFileRoute("/tienda/")({
       { property: "og:title", content: "Tienda — Pingolino Handmade" },
       { property: "og:description", content: "Todo el catálogo artesanal de Pingolino, con precios y personalización." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "/tienda" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/tienda" }],
   }),
   component: Shop,
 });
 
 function Shop() {
-  const { categoria = "Todo" } = Route.useSearch();
   const [sort, setSort] = useState("destacados");
-  let list = categoria === "Todo" ? products : products.filter((p) => p.category === categoria);
+  let list = products;
   if (sort === "asc") list = [...list].sort((a, b) => a.price - b.price);
   if (sort === "desc") list = [...list].sort((a, b) => b.price - a.price);
   return (
@@ -40,12 +39,13 @@ function Shop() {
       <section className="mx-auto max-w-7xl px-5 py-10 lg:px-8">
         <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-y border-border py-4">
           <div className="flex flex-wrap gap-2">
-            {categories.map((c) => (
-              <Link key={c} to="/tienda" search={c === "Todo" ? {} : { categoria: c }}
-                className={`border-b px-1 py-2 text-xs font-medium uppercase tracking-[0.12em] ${c === categoria ? "border-foreground text-foreground" : "border-transparent text-muted-foreground hover:border-border hover:text-foreground"}`}>
-                {c}
-              </Link>
-            ))}
+             <Link to="/tienda" className="border-b border-foreground px-1 py-2 text-xs font-medium uppercase tracking-[0.12em] text-foreground">Todo</Link>
+             {shopCategories.map((category) => (
+               <Link key={category.slug} to="/tienda/categoria/$categoria" params={{ categoria: category.slug }}
+                 className="border-b border-transparent px-1 py-2 text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground hover:border-border hover:text-foreground">
+                 {category.name}
+               </Link>
+             ))}
           </div>
           <select value={sort} onChange={(e) => setSort(e.target.value)} className="border border-border bg-background px-3 py-2 text-sm" aria-label="Ordenar">
             <option value="destacados">Destacados</option>
