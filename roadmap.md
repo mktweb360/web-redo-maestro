@@ -7,3 +7,4 @@
 - [x] Construir web completa: inicio, tienda, fichas, historia, blog, contacto, FAQ
 - [x] Reconstruir toda la web con la dirección boutique editorial elegida
 - [x] Verificar la nueva web en escritorio y móvil
+- [x] Adaptar la cabecera de inicio a la referencia visual aportada
