@@ -11,3 +11,4 @@
 - [x] Colocar el logo a la izquierda y la navegación a la derecha
 - [x] Crear páginas SEO independientes para cada categoría y enlazarlas desde la tienda
 - [x] Verificar navegación, metadatos y diseño en escritorio y móvil
+- [ ] Recuperar el texto original de portada y corregir el encuadre sin tapar el producto
