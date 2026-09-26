@@ -2,47 +2,99 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { FREE_SHIPPING, formatPrice } from "@/lib/catalog";
+import { breadcrumbLd, faqLd, seo } from "@/lib/seo";
+
+type Question = {
+  q: string;
+  a: string;
+  /** Pendiente de confirmar con Pingolino: no entra en el schema. */ pending?: boolean;
+};
+
+const questions: Question[] = [
+  {
+    q: "¿Cuánto cuesta el envío?",
+    a: `El envío es gratis en pedidos desde ${formatPrice(FREE_SHIPPING)}. Para importes menores, el coste se muestra en el pago antes de confirmar el pedido.`,
+  },
+  {
+    q: "¿Cómo pago?",
+    a: "El pago se hace en el checkout seguro de Shopify, con los métodos de pago que se muestran al finalizar la compra.",
+  },
+  {
+    q: "¿Cómo personalizo mi pieza?",
+    a: "En las piezas personalizables encontrarás el campo «Nombre a bordar» en la ficha del producto: escríbelo tal y como quieres que se borde (máximo 14 caracteres). El nombre llega al taller junto con tu pedido.",
+  },
+  {
+    q: "¿Cuándo tendré mi pedido?",
+    a: "Cada pieza se cose a mano y las personalizadas se bordan para cada pedido. Te indicaremos el plazo de confección al confirmar el pedido y lo enviamos en cuanto está listo.",
+    pending: true,
+  },
+  {
+    q: "¿Cómo se cuidan las piezas?",
+    a: "Encontrarás los cuidados en la ficha de cada producto cuando estén confirmados. Si tienes dudas antes de lavar una pieza bordada, escríbenos y te orientamos.",
+    pending: true,
+  },
+  {
+    q: "¿Se aceptan devoluciones?",
+    a: "La política de devoluciones está pendiente de publicación. Las piezas personalizadas se hacen a medida para cada pedido, por lo que tienen condiciones específicas.",
+    pending: true,
+  },
+  {
+    q: "¿Puedo pedir algo especial?",
+    a: "Sí. Para consultar una combinación de telas, una personalización o una idea de encargo, escribe al taller desde la página de contacto.",
+  },
+];
 
 export const Route = createFileRoute("/envios")({
-  head: () => ({
-    meta: [
-      { title: "Envíos y preguntas frecuentes — Pingolino Handmade" },
-      { name: "description", content: "Información sobre el pedido, personalización y condiciones de compra de Pingolino Handmade." },
-      { property: "og:title", content: "Envíos y preguntas frecuentes — Pingolino Handmade" },
-      { property: "og:description", content: "Lo que conviene saber antes de elegir una pieza hecha a mano." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "canonical", href: "/envios" }],
-  }),
+  head: () =>
+    seo({
+      title: "Envíos, pagos y preguntas frecuentes",
+      description: `Envío gratis desde ${formatPrice(FREE_SHIPPING)}, pago seguro con Shopify, personalización con nombre bordado y encargos especiales en Pingolino Handmade.`,
+      path: "/envios",
+      jsonLd: [
+        faqLd(questions.filter((x) => !x.pending).map((x) => [x.q, x.a])),
+        breadcrumbLd([
+          { name: "Inicio", path: "/" },
+          { name: "Ayuda", path: "/envios" },
+        ]),
+      ],
+    }),
   component: Faq,
 });
-
-const questions = [
-  ["¿Cuándo tendré mi pedido?", "El plazo de confección y la estimación de entrega deben confirmarse con Pingolino antes de publicar esta información."],
-  ["¿Cuánto cuesta el envío?", `La web actual anuncia envío gratis en pedidos a partir de ${formatPrice(FREE_SHIPPING)}. Los gastos para pedidos inferiores y las zonas de entrega están pendientes de confirmar.`],
-  ["¿Puedo añadir un nombre?", "Algunas piezas permiten personalización con nombre bordado. Si está disponible, encontrarás un campo para escribirlo en la ficha del producto."],
-  ["¿Cómo se cuidan las piezas?", "Las recomendaciones de lavado y cuidado dependen de cada tejido y deben confirmarse para cada artículo antes de publicarlas como condiciones definitivas."],
-  ["¿Se aceptan devoluciones?", "La política de devoluciones y los supuestos aplicables todavía deben confirmarse con Pingolino. Esta propuesta no fija condiciones legales."],
-  ["¿Puedo pedir algo especial?", "Para consultar una combinación de telas, personalización o idea de encargo, puedes escribir al taller. El formulario de esta propuesta es solo demostrativo."],
-];
 
 function Faq() {
   return (
     <SiteLayout>
-      <section className="mx-auto max-w-[1440px] px-5 py-12 sm:px-8 md:grid md:grid-cols-[.8fr_1.2fr] md:gap-16 md:py-20 lg:px-12 lg:gap-24">
+      <section className="mx-auto max-w-[1440px] px-5 py-12 sm:px-8 md:grid md:grid-cols-[.8fr_1.2fr] md:gap-16 md:py-20 lg:gap-24 lg:px-12">
         <div className="md:sticky md:top-32 md:self-start">
           <p className="section-kicker">Comprar con tranquilidad</p>
-          <h1 className="mt-4 font-display text-6xl leading-[0.83] tracking-tight md:text-7xl">Antes de<br /><i className="font-medium text-primary">elegir.</i></h1>
-          <p className="mt-5 max-w-sm text-sm leading-[1.8] text-muted-foreground">Preguntas frecuentes sobre las piezas y el proceso. Las condiciones que requieren confirmación aparecen señaladas con claridad.</p>
-          <div className="mt-7 border-l-2 border-accent bg-secondary/70 px-4 py-4 text-xs leading-relaxed"><strong className="block text-[9px] uppercase tracking-[0.15em]">Revisión necesaria</strong><span className="mt-2 block text-muted-foreground">Plazos, tarifas por debajo del mínimo, devoluciones y cuidados se deben aprobar antes del lanzamiento.</span></div>
-          <Link to="/contacto" className="mt-7 inline-flex items-center gap-2 border-b border-foreground pb-1 text-[10px] font-semibold uppercase tracking-[0.12em]">Preguntar al taller <ArrowRight size={14} /></Link>
+          <h1 className="mt-4 font-display text-6xl leading-[0.83] tracking-tight md:text-7xl">
+            Envíos y
+            <br />
+            <i className="font-medium text-primary">preguntas.</i>
+          </h1>
+          <p className="mt-5 max-w-sm text-sm leading-[1.8] text-muted-foreground">
+            Lo que conviene saber antes de elegir una pieza hecha a mano: envíos, pago,
+            personalización y encargos.
+          </p>
+          <Link
+            to="/contacto"
+            className="mt-7 inline-flex items-center gap-2 border-b border-foreground pb-1 text-[10px] font-semibold uppercase tracking-[0.12em]"
+          >
+            Preguntar al taller <ArrowRight size={14} />
+          </Link>
         </div>
         <div className="mt-9 divide-y divide-border border-y border-border md:mt-0">
-          {questions.map(([question, answer], index) => <details key={question} className="group py-5" open={index === 1}>
-            <summary className="flex cursor-pointer list-none items-baseline justify-between gap-5 font-display text-2xl sm:text-3xl">{question}<span className="font-sans text-lg text-accent transition-transform group-open:rotate-45">+</span></summary>
-            <p className="mt-3 max-w-2xl pr-8 text-sm leading-[1.8] text-muted-foreground">{answer}</p>
-          </details>)}
+          {questions.map(({ q, a }, index) => (
+            <details key={q} className="group py-5" open={index === 0}>
+              <summary className="flex cursor-pointer list-none items-baseline justify-between gap-5 font-display text-2xl sm:text-3xl">
+                {q}
+                <span className="font-sans text-lg text-accent-strong transition-transform group-open:rotate-45">
+                  +
+                </span>
+              </summary>
+              <p className="mt-3 max-w-2xl pr-8 text-sm leading-[1.8] text-muted-foreground">{a}</p>
+            </details>
+          ))}
         </div>
       </section>
     </SiteLayout>

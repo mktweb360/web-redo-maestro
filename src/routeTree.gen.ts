@@ -14,8 +14,11 @@ import { Route as SlugRouteImport } from './routes/$slug'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as EnviosRouteImport } from './routes/envios'
+import { Route as LlmsDottxtRouteImport } from './routes/llms[.]txt'
 import { Route as NosotrosRouteImport } from './routes/nosotros'
 import { Route as PropuestaRouteImport } from './routes/propuesta'
+import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TiendaRouteImport } from './routes/tienda'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
@@ -48,6 +51,11 @@ const EnviosRoute = EnviosRouteImport.update({
   path: '/envios',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LlmsDottxtRoute = LlmsDottxtRouteImport.update({
+  id: '/llms.txt',
+  path: '/llms.txt',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const NosotrosRoute = NosotrosRouteImport.update({
   id: '/nosotros',
   path: '/nosotros',
@@ -56,6 +64,16 @@ const NosotrosRoute = NosotrosRouteImport.update({
 const PropuestaRoute = PropuestaRouteImport.update({
   id: '/propuesta',
   path: '/propuesta',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
+  id: '/robots.txt',
+  path: '/robots.txt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TiendaRoute = TiendaRouteImport.update({
@@ -96,8 +114,11 @@ export interface FileRoutesByFullPath {
   '/blog': typeof BlogRouteWithChildren
   '/contacto': typeof ContactoRoute
   '/envios': typeof EnviosRoute
+  '/llms.txt': typeof LlmsDottxtRoute
   '/nosotros': typeof NosotrosRoute
   '/propuesta': typeof PropuestaRoute
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tienda': typeof TiendaRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
   '/tienda/$slug': typeof TiendaSlugRoute
@@ -110,8 +131,11 @@ export interface FileRoutesByTo {
   '/$slug': typeof SlugRoute
   '/contacto': typeof ContactoRoute
   '/envios': typeof EnviosRoute
+  '/llms.txt': typeof LlmsDottxtRoute
   '/nosotros': typeof NosotrosRoute
   '/propuesta': typeof PropuestaRoute
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/tienda/$slug': typeof TiendaSlugRoute
   '/blog': typeof BlogIndexRoute
@@ -125,8 +149,11 @@ export interface FileRoutesById {
   '/blog': typeof BlogRouteWithChildren
   '/contacto': typeof ContactoRoute
   '/envios': typeof EnviosRoute
+  '/llms.txt': typeof LlmsDottxtRoute
   '/nosotros': typeof NosotrosRoute
   '/propuesta': typeof PropuestaRoute
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tienda': typeof TiendaRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
   '/tienda/$slug': typeof TiendaSlugRoute
@@ -142,8 +169,11 @@ export interface FileRouteTypes {
     | '/blog'
     | '/contacto'
     | '/envios'
+    | '/llms.txt'
     | '/nosotros'
     | '/propuesta'
+    | '/robots.txt'
+    | '/sitemap.xml'
     | '/tienda'
     | '/blog/$slug'
     | '/tienda/$slug'
@@ -156,8 +186,11 @@ export interface FileRouteTypes {
     | '/$slug'
     | '/contacto'
     | '/envios'
+    | '/llms.txt'
     | '/nosotros'
     | '/propuesta'
+    | '/robots.txt'
+    | '/sitemap.xml'
     | '/blog/$slug'
     | '/tienda/$slug'
     | '/blog'
@@ -170,8 +203,11 @@ export interface FileRouteTypes {
     | '/blog'
     | '/contacto'
     | '/envios'
+    | '/llms.txt'
     | '/nosotros'
     | '/propuesta'
+    | '/robots.txt'
+    | '/sitemap.xml'
     | '/tienda'
     | '/blog/$slug'
     | '/tienda/$slug'
@@ -186,8 +222,11 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRouteWithChildren
   ContactoRoute: typeof ContactoRoute
   EnviosRoute: typeof EnviosRoute
+  LlmsDottxtRoute: typeof LlmsDottxtRoute
   NosotrosRoute: typeof NosotrosRoute
   PropuestaRoute: typeof PropuestaRoute
+  RobotsDottxtRoute: typeof RobotsDottxtRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TiendaRoute: typeof TiendaRouteWithChildren
 }
 
@@ -228,6 +267,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EnviosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/llms.txt': {
+      id: '/llms.txt'
+      path: '/llms.txt'
+      fullPath: '/llms.txt'
+      preLoaderRoute: typeof LlmsDottxtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/nosotros': {
       id: '/nosotros'
       path: '/nosotros'
@@ -240,6 +286,20 @@ declare module '@tanstack/react-router' {
       path: '/propuesta'
       fullPath: '/propuesta'
       preLoaderRoute: typeof PropuestaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/robots.txt': {
+      id: '/robots.txt'
+      path: '/robots.txt'
+      fullPath: '/robots.txt'
+      preLoaderRoute: typeof RobotsDottxtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tienda': {
@@ -320,8 +380,11 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRouteWithChildren,
   ContactoRoute: ContactoRoute,
   EnviosRoute: EnviosRoute,
+  LlmsDottxtRoute: LlmsDottxtRoute,
   NosotrosRoute: NosotrosRoute,
   PropuestaRoute: PropuestaRoute,
+  RobotsDottxtRoute: RobotsDottxtRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   TiendaRoute: TiendaRouteWithChildren,
 }
 export const routeTree = rootRouteImport
