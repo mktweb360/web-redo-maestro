@@ -7,7 +7,7 @@ import materiales from "@/assets/pingolino/materiales.jpg";
 import neceser from "@/assets/pingolino/neceser.jpg";
 import taller from "@/assets/pingolino/taller.jpg";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/propuesta")({
   head: () => ({
     meta: [
       { title: "Pingolino Handmade — Propuesta de rediseño" },

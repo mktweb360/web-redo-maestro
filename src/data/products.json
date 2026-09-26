@@ -1,7 +1,7 @@
 [
  {
   "slug": "manta-arrullo-volantes-rosa",
-  "name": "Manta Arrullo para Bebé con Volantes Personalizada",
+  "name": "Manta arrullo con volantes",
   "subtitle": "Algodón Waffle Rosa Empolvado",
   "price": 29.95,
   "category": "Mantas",
@@ -25,8 +25,8 @@
  },
  {
   "slug": "bolsa-playa-vichy",
-  "name": "Bolsa de Playa Grande Vichy Blanco y Negro",
-  "subtitle": "",
+  "name": "Bolsa de playa grande vichy",
+  "subtitle": "Blanco y negro",
   "price": 44.95,
   "category": "Bolsos",
   "available": true,
@@ -50,7 +50,7 @@
  },
  {
   "slug": "mochila-infantil-algodon",
-  "name": "Mochila Infantil de Algodón Personalizable",
+  "name": "Mochila infantil de algodón",
   "subtitle": "Mochila Escolar para Guardería y Educación Infantil · Bolsa para Merienda",
   "price": 39.99,
   "category": "Mochilas",
@@ -75,7 +75,7 @@
  },
  {
   "slug": "tote-bag-vichy-negra",
-  "name": "Tote Bag de Tela Vichy Negra",
+  "name": "Tote bag vichy negra",
   "subtitle": "Bolso Shopper Reutilizable Handmade",
   "price": 22.0,
   "category": "Bolsos",
@@ -97,7 +97,7 @@
  },
  {
   "slug": "manta-borreguito-75x100",
-  "name": "Manta para Bebé de Algodón con Borreguito Suave 75x100 cm",
+  "name": "Manta de algodón con borreguito",
   "subtitle": "Manta de Invierno para Cuna, Carrito y Capazo",
   "price": 34.95,
   "category": "Mantas",
@@ -122,8 +122,8 @@
  },
  {
   "slug": "portatoallitas-porta-panales",
-  "name": "Portatoallitas y Porta Pañales para Bebé Hecho a Mano",
-  "subtitle": "",
+  "name": "Portatoallitas y porta pañales",
+  "subtitle": "Organizador hecho a mano",
   "price": 23.95,
   "category": "Paseo",
   "available": true,
@@ -145,7 +145,7 @@
  },
  {
   "slug": "corona-cumpleanos-personalizada",
-  "name": "Corona de Cumpleaños Personalizada de Tela",
+  "name": "Corona de cumpleaños personalizada",
   "subtitle": "Corona Reversible para Niños y Bebés · Con Número y Nombre Bordado",
   "price": 22.95,
   "category": "Celebraciones",
@@ -171,7 +171,7 @@
  {
   "slug": "manta-algodon-waffle-75x100-b",
   "name": "Manta de algodón para bebé 75x100 cm",
-  "subtitle": "",
+  "subtitle": "Waffle y muselina · Edición bordada",
   "price": 19.99,
   "category": "Mantas",
   "available": true,
@@ -194,7 +194,7 @@
  {
   "slug": "manta-algodon-waffle-75x100",
   "name": "Manta de algodón para bebé 75x100 cm",
-  "subtitle": "",
+  "subtitle": "Waffle y muselina de algodón",
   "price": 19.99,
   "category": "Mantas",
   "available": true,
@@ -218,7 +218,7 @@
  },
  {
   "slug": "neceser-vichy-amarillo",
-  "name": "Neceser Personalizado con Nombre Bordado",
+  "name": "Neceser con nombre bordado",
   "subtitle": "Tela Vichy Amarilla",
   "price": 19.95,
   "category": "Neceseres",
