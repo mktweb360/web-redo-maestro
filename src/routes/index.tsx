@@ -29,8 +29,6 @@ const cats = [
 ];
 
 function Home() {
-  const hero = products.find((p) => p.slug === "manta-arrullo-volantes-rosa") ?? products[0];
-  if (!hero) return null;
   return (
     <SiteLayout headerOverlay>
       <section className="relative flex min-h-[720px] h-[92svh] max-h-[940px] items-end overflow-hidden text-primary-foreground">
