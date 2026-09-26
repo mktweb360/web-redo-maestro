@@ -11,4 +11,5 @@
 
 ## Project architecture
 
-- The home route is an interactive, self-contained client presentation; keep slide content data-driven in `src/routes/index.tsx` so navigation and narrative stay synchronized.
+- The redesign pitch deck lives at `/propuesta` (`src/routes/propuesta.tsx`), data-driven so slides and navigation stay synced.
+- The proposed storefront uses `src/data/products.json` (real catalog, images as CDN assets) and `src/lib/catalog.ts` as single source for products and blog posts; cart is client-only context in `src/lib/cart.tsx` because checkout is a demo.
