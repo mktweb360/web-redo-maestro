@@ -5,7 +5,7 @@ import { ProductCard } from "@/components/site/ProductCard";
 import { getCategoryByName, posts, products } from "@/lib/catalog";
 import taller from "@/assets/pingolino/taller.jpg";
 import materiales from "@/assets/pingolino/materiales.jpg";
-import bolsaPlaya from "@/assets/pingolino/bolsa-playa.jpg";
+import bolsaPlayaHero from "@/assets/pingolino/bolsa-playa-hero.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -30,23 +30,23 @@ const cats = [
 
 function Home() {
   return (
-    <SiteLayout headerOverlay>
-      <section className="relative flex min-h-[720px] h-[92svh] max-h-[940px] items-end overflow-hidden text-primary-foreground">
-        <img src={bolsaPlaya} alt="Bolsa de playa vichy de Pingolino Handmade" className="absolute inset-0 h-full w-full object-cover object-[58%_58%] md:object-center" />
-        <div className="absolute inset-0 bg-foreground/55 md:bg-foreground/45" />
-        <div className="absolute inset-0 bg-gradient-to-r from-foreground/65 via-foreground/20 to-transparent" />
-        <div className="relative mx-auto w-full max-w-7xl px-5 pb-14 lg:px-8 lg:pb-20">
-          <div className="reveal-up max-w-4xl">
-            <p className="inline-flex items-center gap-3 border-b border-primary-foreground/55 pb-3 text-[10px] font-semibold uppercase tracking-[0.22em]">Taller familiar artesanal · España</p>
-            <h1 className="mt-5 font-display text-[clamp(4.3rem,9.5vw,9rem)] leading-[0.76]">
-              Hecho para<br/><em className="font-medium text-cover-accent">acompañar.</em>
-            </h1>
-            <p className="mt-7 max-w-xl text-base leading-relaxed text-primary-foreground/85 md:text-lg">
-              Piezas textiles cosidas una a una para convertir los días de cada peque en recuerdos que se guardan para siempre.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link to="/tienda" className="inline-flex items-center gap-3 border-b border-primary-foreground pb-2 text-xs font-semibold uppercase tracking-[0.14em] transition-colors hover:border-cover-accent hover:text-cover-accent">Descubrir la colección <ArrowRight size={15}/></Link>
-              <Link to="/nosotros" className="inline-flex items-center border-b border-primary-foreground/45 pb-2 text-xs font-semibold uppercase tracking-[0.14em] transition-colors hover:border-cover-accent hover:text-cover-accent">Nuestra historia</Link>
+    <SiteLayout>
+      <section className="overflow-hidden bg-card">
+        <div className="relative md:min-h-[690px] lg:min-h-[760px]">
+          <img src={bolsaPlayaHero} alt="Bolsa de playa vichy de Pingolino Handmade junto a una piscina" className="aspect-[4/3] w-full object-cover object-[72%_center] md:absolute md:inset-0 md:h-full md:aspect-auto md:object-cover md:object-center" />
+          <div className="relative bg-card px-5 py-12 md:flex md:min-h-[690px] md:w-[43%] md:items-end md:bg-gradient-to-r md:from-card md:from-80% md:to-transparent md:px-8 md:pb-16 lg:min-h-[760px] lg:w-[40%] lg:pl-[max(2rem,calc((100vw-80rem)/2+2rem))] lg:pr-10 lg:pb-20">
+            <div className="reveal-up max-w-lg">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-accent">Taller familiar artesanal · España</p>
+              <h1 className="mt-5 font-display text-6xl leading-[0.86] md:text-[4.8rem] lg:text-[5.8rem]">
+                Hecho a mano,<br/><em className="font-medium text-accent">pensado para crecer.</em>
+              </h1>
+              <p className="mt-7 max-w-md text-base leading-relaxed text-muted-foreground md:text-lg">
+                Piezas textiles únicas, cosidas con calma y personalizadas para acompañar a los más pequeños durante mucho tiempo.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
+                <Link to="/tienda" className="inline-flex items-center gap-3 border-b border-foreground pb-2 text-xs font-semibold uppercase tracking-[0.14em] transition-colors hover:border-accent hover:text-accent">Descubrir la colección <ArrowRight size={15}/></Link>
+                <Link to="/nosotros" className="inline-flex items-center border-b border-border pb-2 text-xs font-semibold uppercase tracking-[0.14em] transition-colors hover:border-accent hover:text-accent">Nuestra historia</Link>
+              </div>
             </div>
           </div>
         </div>
