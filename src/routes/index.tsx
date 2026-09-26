@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowLeft, ArrowRight, Check, Menu, X } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, Download, Menu, X } from "lucide-react";
 import { useEffect, useState, type ReactNode } from "react";
 import bolsa from "@/assets/pingolino/bolsa-playa.jpg";
 import corona from "@/assets/pingolino/corona.jpg";
@@ -55,6 +55,9 @@ function Index() {
           <span><strong>Pingolino</strong><small>Propuesta de rediseño</small></span>
         </button>
         <div className="header-meta">
+          <a className="next-button pdf-download" href="/pingolino-propuesta-rediseno.pdf" download="Pingolino-propuesta-rediseno.pdf" aria-label="Descargar la propuesta en PDF">
+            <Download size={16} /> PDF
+          </a>
           <span className="slide-label">{String(slide + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}</span>
           <button className="icon-button" onClick={() => setMenuOpen(!menuOpen)} aria-label="Abrir índice">
             {menuOpen ? <X size={18} /> : <Menu size={18} />}
