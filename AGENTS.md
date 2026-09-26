@@ -12,6 +12,7 @@
 ## Project architecture
 
 - The redesign pitch deck lives at `/propuesta` (`src/routes/propuesta.tsx`), data-driven so slides and navigation stay synced.
-- The proposed storefront uses `src/data/products.json` (real catalog, images as CDN assets) and `src/lib/catalog.ts` as single source for products and blog posts; cart is client-only context in `src/lib/cart.tsx` because checkout is a demo.
+- The storefront uses `src/data/products.json` (real catalog with Shopify handles/variant IDs) and `src/lib/catalog.ts` as single source for products, categories and blog posts. The cart (`src/lib/cart.tsx`) hands off to **Shopify checkout via cart permalinks** (embroidery names travel as line-item properties + order attributes). Never add a fake/demo checkout or invented business data (emails, phones, reviews, dates).
+- SEO/GEO infrastructure: `src/lib/seo.ts` (meta + JSON-LD), `src/lib/site.ts` (verified business data, env), `src/lib/redirects.ts` (301s from the old Shopify URLs, applied in `src/server.ts`), and server routes `/sitemap.xml`, `/robots.txt`, `/llms.txt`. Keep new pages on the `seo()` helper. See `docs/SEO-GEO-CRO.md`.
 - The storefront uses one editorial boutique system across every route: Cormorant Garamond display type, Karla body type, and the existing sage/clay/ink semantic palette, so commerce and editorial pages feel like one brand.
 - Product categories and products use flat, indexable `/$slug` URLs with unique copy, metadata, and self-referencing canonicals; legacy `/tienda/...` URLs permanently redirect so search authority is preserved.
