@@ -5,5 +5,5 @@
 - [x] Construir la presentación navegable
 - [x] Verificar el resultado inicial en escritorio y móvil
 - [x] Construir web completa: inicio, tienda, fichas, historia, blog, contacto, FAQ
-- [ ] Reconstruir toda la web con la dirección boutique editorial elegida
+- [x] Reconstruir toda la web con la dirección boutique editorial elegida
 - [ ] Verificar la nueva web en escritorio y móvil

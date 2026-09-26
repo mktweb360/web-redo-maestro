@@ -55,13 +55,13 @@ function ProductPage() {
 
   return (
     <SiteLayout>
-      <div className="mx-auto max-w-7xl px-5 py-10">
-        <nav className="text-xs text-muted-foreground">
+      <div className="mx-auto max-w-7xl px-5 py-10 lg:px-8 lg:py-14">
+        <nav className="text-[10px] font-medium uppercase tracking-[0.14em] text-muted-foreground">
           <Link to="/">Inicio</Link> / <Link to="/tienda">Tienda</Link> / <Link to="/tienda" search={{ categoria: p.category }}>{p.category}</Link>
         </nav>
-        <div className="mt-6 grid gap-12 md:grid-cols-2">
+        <div className="mt-8 grid gap-12 lg:grid-cols-[1.12fr_.88fr] lg:gap-20">
           <div>
-            <img key={img} src={p.images[img]} alt={p.name} className="aspect-[4/5] w-full object-cover" />
+            <img key={img} src={p.images[img]} alt={p.name} className="aspect-[4/5] w-full bg-muted object-cover" />
             {p.images.length > 1 && (
               <div className="mt-3 grid grid-cols-4 gap-3">
                 {p.images.map((src, i) => (
@@ -72,12 +72,12 @@ function ProductPage() {
               </div>
             )}
           </div>
-          <div className="md:sticky md:top-24 md:self-start">
-            <p className="text-xs uppercase tracking-widest text-accent">{p.category}</p>
-            <h1 className="mt-3 font-display text-5xl leading-tight">{p.name}</h1>
+          <div className="lg:sticky lg:top-28 lg:self-start">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-accent">{p.category}</p>
+            <h1 className="mt-4 font-display text-5xl leading-[0.98] md:text-6xl">{p.name}</h1>
             {p.subtitle && <p className="mt-2 text-muted-foreground">{p.subtitle}</p>}
-            <p className="mt-5 text-2xl">{formatPrice(p.price)}</p>
-            <p className="mt-6 leading-relaxed">{lead}</p>
+            <p className="mt-6 text-xl">{formatPrice(p.price)}</p>
+            <p className="mt-7 border-t border-border pt-6 leading-relaxed text-muted-foreground">{lead}</p>
 
             {p.personalizable && (
               <label className="mt-8 block">
@@ -95,7 +95,7 @@ function ProductPage() {
                 <button aria-label="Más" onClick={() => setQty(qty + 1)}><Plus size={14} /></button>
               </div>
               <button disabled={!p.available} onClick={() => cart.add(p.slug, qty, name.trim() || undefined)}
-                className="flex-1 bg-primary py-4 text-sm text-primary-foreground disabled:opacity-40">
+                className="flex-1 bg-primary py-4 text-xs font-semibold uppercase tracking-[0.12em] text-primary-foreground transition-colors hover:bg-foreground disabled:opacity-40">
                 {p.available ? `Añadir a la cesta · ${formatPrice(p.price * qty)}` : "Agotado — avísame"}
               </button>
             </div>
@@ -125,8 +125,9 @@ function ProductPage() {
           </div>
         </div>
 
-        <section className="mt-24">
-          <h2 className="font-display text-4xl">También te puede gustar</h2>
+        <section className="mt-28 border-t border-border pt-16">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-accent">Sigue descubriendo</p>
+          <h2 className="mt-3 font-display text-5xl">También te puede gustar</h2>
           <div className="mt-8 grid grid-cols-2 gap-5 md:grid-cols-4">
             {related.map((r) => <ProductCard key={r.slug} product={r} />)}
           </div>
