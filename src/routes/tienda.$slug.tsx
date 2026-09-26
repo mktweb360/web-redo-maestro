@@ -1,14 +1,14 @@
 import { createFileRoute, redirect } from "@tanstack/react-router";
 import { getProduct } from "@/lib/catalog";
+import { redirectMap } from "@/lib/redirects";
 
+// URLs antiguas /tienda/{producto} → /{producto} (301)
 export const Route = createFileRoute("/tienda/$slug")({
   loader: ({ params }) => {
-    const product = getProduct(params.slug);
-    throw redirect({
-      to: product ? "/$slug" : "/tienda",
-      params: product ? { slug: product.slug } : {},
-      statusCode: 301,
-    });
+    const current = getProduct(params.slug)
+      ? `/${params.slug}`
+      : redirectMap.get(`/${params.slug.toLowerCase()}`);
+    throw redirect({ href: current ?? "/tienda", statusCode: 301 });
   },
   component: () => null,
 });

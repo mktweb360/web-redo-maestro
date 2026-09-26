@@ -42,6 +42,7 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-accent-strong: var(--accent-strong);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
@@ -80,6 +81,8 @@
   --muted-foreground: oklch(0.48 0.025 120);
   --accent: oklch(0.61 0.115 38);
   --accent-foreground: oklch(0.98 0.008 90);
+  /* Variante del acento para TEXTO: contraste AA (≈5,4:1 sobre el fondo). */
+  --accent-strong: oklch(0.52 0.12 38);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(0.85 0.025 100);
