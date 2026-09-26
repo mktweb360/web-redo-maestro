@@ -13,3 +13,4 @@
 
 - The redesign pitch deck lives at `/propuesta` (`src/routes/propuesta.tsx`), data-driven so slides and navigation stay synced.
 - The proposed storefront uses `src/data/products.json` (real catalog, images as CDN assets) and `src/lib/catalog.ts` as single source for products and blog posts; cart is client-only context in `src/lib/cart.tsx` because checkout is a demo.
+- The storefront uses one editorial boutique system across every route: Cormorant Garamond display type, Karla body type, and the existing sage/clay/ink semantic palette, so commerce and editorial pages feel like one brand.

@@ -21,9 +21,10 @@ function Contact() {
   const [sent, setSent] = useState(false);
   return (
     <SiteLayout>
-      <section className="mx-auto grid max-w-7xl gap-16 px-5 py-16 md:grid-cols-2">
+      <section className="mx-auto grid max-w-7xl gap-16 px-5 py-20 md:grid-cols-[.8fr_1.2fr] lg:px-8">
         <div>
-          <h1 className="font-display text-6xl md:text-7xl">Hablemos.</h1>
+          <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-accent">Atención personal</p>
+          <h1 className="mt-4 font-display text-6xl leading-none md:text-8xl">Hablemos.</h1>
           <p className="mt-5 max-w-md text-lg text-muted-foreground">¿Buscas un encargo especial, un tejido concreto o tienes dudas sobre tu pedido? Te respondemos personalmente.</p>
           <ul className="mt-10 space-y-5">
             <li className="flex items-center gap-3"><Mail className="text-accent" /> hola@pingolinohandmade.com</li>
@@ -32,11 +33,11 @@ function Contact() {
           </ul>
         </div>
         {sent ? (
-          <div className="grid place-items-center bg-muted p-10 text-center">
+          <div className="grid place-items-center border border-border bg-card p-10 text-center">
             <div><p className="font-display text-4xl">¡Mensaje recibido!</p><p className="mt-3 text-muted-foreground">Te contestaremos lo antes posible.</p></div>
           </div>
         ) : (
-          <form className="space-y-5 bg-muted p-8" onSubmit={(e) => { e.preventDefault(); setSent(true); }}>
+          <form className="space-y-6 border border-border bg-card p-7 md:p-10" onSubmit={(e) => { e.preventDefault(); setSent(true); }}>
             {[["Nombre", "text"], ["Correo electrónico", "email"]].map(([l, t]) => (
               <label key={l} className="block text-sm">{l}
                 <input required type={t} className="mt-2 w-full border border-input bg-background px-4 py-3 outline-none focus:border-primary" />
@@ -50,7 +51,7 @@ function Contact() {
             <label className="block text-sm">Mensaje
               <textarea required rows={5} className="mt-2 w-full border border-input bg-background px-4 py-3 outline-none focus:border-primary" />
             </label>
-            <button className="w-full bg-primary py-4 text-sm text-primary-foreground">Enviar mensaje</button>
+            <button className="w-full bg-primary py-4 text-xs font-semibold uppercase tracking-[0.14em] text-primary-foreground">Enviar mensaje</button>
           </form>
         )}
       </section>

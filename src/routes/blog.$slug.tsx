@@ -42,16 +42,16 @@ function PostPage() {
   const { post } = Route.useLoaderData();
   return (
     <SiteLayout>
-      <article className="mx-auto max-w-3xl px-5 py-14">
+      <article className="mx-auto max-w-4xl px-5 py-16">
         <Link to="/blog" className="text-sm text-muted-foreground">← Blog</Link>
         <p className="mt-8 text-xs uppercase tracking-widest text-accent">{post.category} · {post.date} · {post.readTime}</p>
-        <h1 className="mt-4 font-display text-5xl leading-tight md:text-6xl">{post.title}</h1>
+        <h1 className="mt-5 font-display text-5xl leading-[0.98] md:text-7xl">{post.title}</h1>
         <p className="mt-5 text-lg text-muted-foreground">{post.excerpt}</p>
-        <img src={post.image} alt={post.title} className="mt-10 aspect-[16/10] w-full object-cover" />
-        <div className="mt-10 space-y-6 text-lg leading-relaxed">
+        <img src={post.image} alt={post.title} className="mt-12 aspect-[16/10] w-full object-cover" />
+        <div className="mx-auto mt-12 max-w-2xl space-y-8 text-lg leading-relaxed">
           {post.body.map((b, i) => (
             <div key={i}>
-              {b.heading && <h2 className="mb-2 font-display text-3xl">{b.heading}</h2>}
+              {b.heading && <h2 className="mb-3 font-display text-4xl leading-tight">{b.heading}</h2>}
               <p>{b.text}</p>
             </div>
           ))}

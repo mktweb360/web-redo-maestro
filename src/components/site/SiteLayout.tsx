@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Facebook, Menu, Minus, Plus, ShoppingBag, X } from "lucide-react";
+import { Instagram, Facebook, Menu, Minus, Plus, ShoppingBag, X, ArrowRight } from "lucide-react";
 import { useState, type ReactNode } from "react";
 import { useCart } from "@/lib/cart";
 import { FREE_SHIPPING, formatPrice } from "@/lib/catalog";
@@ -17,25 +17,31 @@ export function SiteLayout({ children }: { children: ReactNode }) {
   const cart = useCart();
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="bg-primary px-4 py-2 text-center text-xs tracking-wide text-primary-foreground">
-        Envío gratis en pedidos desde {formatPrice(FREE_SHIPPING)} · Hecho a mano en España
+      <div className="bg-primary px-4 py-2.5 text-center text-[10px] font-medium uppercase tracking-[0.22em] text-primary-foreground">
+        Envío gratis desde {formatPrice(FREE_SHIPPING)} <span className="mx-2 opacity-50">•</span> Hecho a mano en España
       </div>
-      <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5">
-          <button className="md:hidden" aria-label="Abrir menú" onClick={() => setMenu(true)}>
+      <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur-md">
+        <div className="mx-auto grid h-20 max-w-7xl grid-cols-[44px_minmax(0,1fr)_44px] items-center px-5 lg:grid-cols-[1fr_auto_1fr] lg:px-8">
+          <button className="grid size-10 place-items-center lg:hidden" aria-label="Abrir menú" onClick={() => setMenu(true)}>
             <Menu size={22} />
           </button>
-          <Link to="/" className="font-display text-2xl tracking-tight">
-            Pingolino <span className="italic text-accent">handmade</span>
-          </Link>
-          <nav className="hidden gap-7 text-sm md:flex">
-            {nav.map((n) => (
+          <nav className="hidden items-center gap-8 text-[11px] font-medium uppercase tracking-[0.14em] lg:flex">
+            {nav.slice(0, 2).map((n) => (
               <Link key={n.to} to={n.to} className="hover:text-accent" activeProps={{ className: "text-accent" }}>
                 {n.label}
               </Link>
             ))}
           </nav>
-          <button onClick={() => cart.setOpen(true)} className="relative" aria-label="Abrir carrito">
+          <Link to="/" className="min-w-0 text-center font-display text-[clamp(1.55rem,2.5vw,2.1rem)] leading-none">
+            Pingolino <span className="italic text-accent">handmade</span>
+          </Link>
+          <div className="flex items-center justify-end gap-7">
+            <nav className="hidden items-center gap-8 text-[11px] font-medium uppercase tracking-[0.14em] lg:flex">
+              {nav.slice(2).map((n) => (
+                <Link key={n.to} to={n.to} className="hover:text-accent" activeProps={{ className: "text-accent" }}>{n.label}</Link>
+              ))}
+            </nav>
+          <button onClick={() => cart.setOpen(true)} className="relative grid size-10 shrink-0 place-items-center transition-transform hover:scale-105" aria-label="Abrir carrito">
             <ShoppingBag size={22} />
             {cart.count > 0 && (
               <span className="absolute -right-2 -top-2 grid h-5 w-5 place-items-center rounded-full bg-accent text-[10px] text-accent-foreground">
@@ -43,6 +49,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               </span>
             )}
           </button>
+          </div>
         </div>
       </header>
 
@@ -60,14 +67,14 @@ export function SiteLayout({ children }: { children: ReactNode }) {
 
       <main>{children}</main>
 
-      <footer className="mt-24 bg-foreground text-background">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 md:grid-cols-4">
-          <div className="md:col-span-2">
-            <p className="font-display text-4xl">Hecho puntada a puntada.</p>
-            <p className="mt-3 max-w-sm text-sm opacity-70">Suscríbete y recibe novedades, lanzamientos y ofertas exclusivas.</p>
-            <form className="mt-5 flex max-w-sm border-b border-background/40" onSubmit={(e) => e.preventDefault()}>
-              <input type="email" placeholder="Tu correo electrónico" className="flex-1 bg-transparent py-2 text-sm outline-none placeholder:text-background/50" />
-              <button className="text-sm">Suscribirme →</button>
+      <footer className="mt-28 bg-foreground text-background">
+        <div className="mx-auto grid max-w-7xl gap-14 px-5 py-20 md:grid-cols-[1.5fr_.6fr_.6fr] lg:px-8">
+          <div>
+            <p className="max-w-xl font-display text-5xl leading-none md:text-6xl">Historias pequeñas,<br/><em className="text-cover-accent">recuerdos enormes.</em></p>
+            <p className="mt-6 max-w-sm text-sm leading-relaxed opacity-70">Novedades del taller, nuevas telas y piezas pensadas para regalar.</p>
+            <form className="mt-8 flex max-w-md border-b border-background/40" onSubmit={(e) => e.preventDefault()}>
+              <input type="email" placeholder="Tu correo electrónico" className="min-w-0 flex-1 bg-transparent py-3 text-sm outline-none placeholder:text-background/50" />
+              <button className="grid size-11 place-items-center" aria-label="Suscribirme"><ArrowRight size={18}/></button>
             </form>
           </div>
           <div className="flex flex-col gap-2 text-sm">

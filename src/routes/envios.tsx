@@ -27,13 +27,14 @@ const faqs = [
 function Faq() {
   return (
     <SiteLayout>
-      <section className="mx-auto max-w-3xl px-5 py-16">
-        <h1 className="font-display text-6xl">Envíos y preguntas frecuentes</h1>
+      <section className="mx-auto max-w-4xl px-5 py-20">
+        <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-accent">Comprar con tranquilidad</p>
+        <h1 className="mt-4 font-display text-6xl leading-[0.95] md:text-8xl">Envíos y preguntas frecuentes</h1>
         <div className="mt-12 divide-y divide-border border-y border-border">
           {faqs.map(([q, a]) => (
-            <details key={q} className="py-5">
-              <summary className="cursor-pointer font-display text-2xl">{q}</summary>
-              <p className="mt-3 text-muted-foreground">{a}</p>
+            <details key={q} className="group py-6">
+              <summary className="cursor-pointer font-display text-2xl marker:text-accent md:text-3xl">{q}</summary>
+              <p className="mt-4 max-w-2xl leading-relaxed text-muted-foreground">{a}</p>
             </details>
           ))}
         </div>
