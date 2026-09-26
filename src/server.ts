@@ -2,6 +2,7 @@ import "./lib/error-capture";
 
 import { consumeLastCapturedError } from "./lib/error-capture";
 import { renderErrorPage } from "./lib/error-page";
+import { resolveRedirect } from "./lib/redirects";
 
 type ServerEntry = {
   fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
@@ -46,6 +47,18 @@ function isH3SwallowedErrorBody(body: string): boolean {
 
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
+    // Redirecciones 301 (URLs antiguas de Shopify y slugs previos) antes del router.
+    if (request.method === "GET" || request.method === "HEAD") {
+      const url = new URL(request.url);
+      const target = resolveRedirect(url.pathname);
+      if (target) {
+        const location = /^https?:\/\//.test(target) ? target : `${target}${url.search}`;
+        return new Response(null, {
+          status: 301,
+          headers: { Location: location, "Cache-Control": "public, max-age=3600" },
+        });
+      }
+    }
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);

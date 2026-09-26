@@ -16,6 +16,8 @@ export const Route = createFileRoute("/propuesta")({
       { property: "og:description", content: "Una experiencia digital más cálida, clara y preparada para vender." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      // Presentación comercial interna: no debe indexarse. Retirar antes del lanzamiento.
+      { name: "robots", content: "noindex, nofollow" },
     ],
   }),
   component: Index,
