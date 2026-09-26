@@ -28,14 +28,21 @@ function Shop() {
   if (sort === "desc") list = [...list].sort((a, b) => b.price - a.price);
   return (
     <SiteLayout>
-      <section className="mx-auto max-w-7xl px-5 py-14">
-        <h1 className="font-display text-6xl md:text-7xl">La tienda</h1>
-        <p className="mt-4 max-w-xl text-muted-foreground">Cada pieza se cose por encargo en nuestro taller. Muchas se pueden personalizar con el nombre que elijas.</p>
+      <section className="border-b border-border bg-secondary">
+        <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-accent">Colección artesanal</p>
+          <div className="mt-4 grid items-end gap-6 md:grid-cols-[1fr_.7fr]">
+            <h1 className="font-display text-6xl leading-none md:text-8xl">La tienda</h1>
+            <p className="max-w-xl leading-relaxed text-muted-foreground">Cada pieza se cose por encargo en nuestro taller. Muchas se pueden personalizar con el nombre que elijas.</p>
+          </div>
+        </div>
+      </section>
+      <section className="mx-auto max-w-7xl px-5 py-10 lg:px-8">
         <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-y border-border py-4">
           <div className="flex flex-wrap gap-2">
             {categories.map((c) => (
               <Link key={c} to="/tienda" search={c === "Todo" ? {} : { categoria: c }}
-                className={`px-4 py-2 text-sm ${c === categoria ? "bg-foreground text-background" : "border border-border hover:border-foreground"}`}>
+                className={`border-b px-1 py-2 text-xs font-medium uppercase tracking-[0.12em] ${c === categoria ? "border-foreground text-foreground" : "border-transparent text-muted-foreground hover:border-border hover:text-foreground"}`}>
                 {c}
               </Link>
             ))}
@@ -46,8 +53,8 @@ function Shop() {
             <option value="desc">Precio: mayor a menor</option>
           </select>
         </div>
-        <p className="mt-6 text-sm text-muted-foreground">{list.length} productos</p>
-        <div className="mt-6 grid grid-cols-2 gap-x-5 gap-y-12 md:grid-cols-3 lg:grid-cols-4">
+        <p className="mt-8 text-xs uppercase tracking-[0.14em] text-muted-foreground">{list.length} productos</p>
+        <div className="mt-6 grid grid-cols-2 gap-x-4 gap-y-14 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-6">
           {list.map((p) => <ProductCard key={p.slug} product={p} />)}
         </div>
       </section>
