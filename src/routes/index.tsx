@@ -33,7 +33,7 @@ function Home() {
     <SiteLayout>
       <section className="overflow-hidden bg-card">
         <div className="relative md:min-h-[690px] lg:min-h-[760px]">
-          <img src={bolsaPlayaHero} alt="Bolsa de playa vichy de Pingolino Handmade junto a una piscina" className="aspect-[4/3] w-full object-cover object-[72%_center] md:absolute md:inset-0 md:h-full md:aspect-auto md:object-cover md:object-center" />
+          <img src={bolsaPlayaHero} alt="Bolsa de playa vichy de Pingolino Handmade junto a una piscina" className="aspect-video w-full object-cover object-center md:absolute md:inset-0 md:h-full md:aspect-auto" />
           <div className="relative bg-card px-5 py-12 md:flex md:min-h-[690px] md:w-[43%] md:items-end md:bg-gradient-to-r md:from-card md:from-80% md:to-transparent md:px-8 md:pb-16 lg:min-h-[760px] lg:w-[40%] lg:pl-[max(2rem,calc((100vw-80rem)/2+2rem))] lg:pr-10 lg:pb-20">
             <div className="reveal-up max-w-lg">
               <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-accent">Taller familiar artesanal · España</p>
