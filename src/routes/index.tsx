@@ -75,7 +75,7 @@ function Home() {
             const category = getCategoryByName(c.name);
             if (!p || !category) return null;
             return (
-              <Link key={c.name} to="/tienda/categoria/$categoria" params={{ categoria: category.slug }} className="group relative aspect-[3/4] overflow-hidden">
+              <Link key={c.name} to="/$slug" params={{ slug: category.slug }} className="group relative aspect-[3/4] overflow-hidden">
                 <img src={p.images[0]} alt={c.name} className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
                 <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/80 via-foreground/25 to-transparent p-5 pt-16 font-display text-3xl text-background">{c.name}</span>
               </Link>
