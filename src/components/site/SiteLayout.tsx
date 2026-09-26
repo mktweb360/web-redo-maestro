@@ -22,34 +22,27 @@ export function SiteLayout({ children, headerOverlay = false }: { children: Reac
         Envío gratis desde {formatPrice(FREE_SHIPPING)} <span className="mx-2 opacity-50">•</span> Hecho a mano en España
       </div>
       <header className={headerOverlay ? "border-b border-primary-foreground/25 bg-foreground/15 backdrop-blur-[2px]" : "sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur-md"}>
-        <div className="mx-auto grid h-20 max-w-7xl grid-cols-[44px_minmax(0,1fr)_44px] items-center px-5 lg:grid-cols-[1fr_auto_1fr] lg:px-8">
-          <button className="grid size-10 place-items-center lg:hidden" aria-label="Abrir menú" onClick={() => setMenu(true)}>
-            <Menu size={22} />
-          </button>
-          <nav className="hidden items-center gap-8 text-[11px] font-medium uppercase tracking-[0.14em] lg:flex">
-            {nav.slice(0, 2).map((n) => (
-               <Link key={n.to} to={n.to} className={headerOverlay ? "hover:text-cover-accent" : "hover:text-accent"} activeProps={{ className: headerOverlay ? "text-cover-accent" : "text-accent" }}>
-                {n.label}
-              </Link>
-            ))}
-          </nav>
-           <Link to="/" className="min-w-0 text-center font-display text-[clamp(1.55rem,2.5vw,2.1rem)] leading-none">
+         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-6 px-5 lg:px-8">
+           <Link to="/" className="min-w-0 shrink-0 font-display text-[clamp(1.55rem,2.5vw,2.1rem)] leading-none">
              Pingolino <span className={headerOverlay ? "italic text-cover-accent" : "italic text-accent"}>handmade</span>
           </Link>
-          <div className="flex items-center justify-end gap-7">
+           <div className="flex items-center justify-end gap-2 lg:gap-7">
             <nav className="hidden items-center gap-8 text-[11px] font-medium uppercase tracking-[0.14em] lg:flex">
-              {nav.slice(2).map((n) => (
+               {nav.map((n) => (
                  <Link key={n.to} to={n.to} className={headerOverlay ? "hover:text-cover-accent" : "hover:text-accent"} activeProps={{ className: headerOverlay ? "text-cover-accent" : "text-accent" }}>{n.label}</Link>
               ))}
             </nav>
-          <button onClick={() => cart.setOpen(true)} className="relative grid size-10 shrink-0 place-items-center transition-transform hover:scale-105" aria-label="Abrir carrito">
-            <ShoppingBag size={22} />
-            {cart.count > 0 && (
-              <span className="absolute -right-2 -top-2 grid h-5 w-5 place-items-center rounded-full bg-accent text-[10px] text-accent-foreground">
-                {cart.count}
-              </span>
-            )}
-          </button>
+             <button onClick={() => cart.setOpen(true)} className="relative grid size-10 shrink-0 place-items-center transition-transform hover:scale-105" aria-label="Abrir carrito">
+               <ShoppingBag size={22} />
+               {cart.count > 0 && (
+                 <span className="absolute -right-2 -top-2 grid h-5 w-5 place-items-center rounded-full bg-accent text-[10px] text-accent-foreground">
+                   {cart.count}
+                 </span>
+               )}
+             </button>
+             <button className="grid size-10 place-items-center lg:hidden" aria-label="Abrir menú" onClick={() => setMenu(true)}>
+               <Menu size={22} />
+             </button>
           </div>
         </div>
       </header>

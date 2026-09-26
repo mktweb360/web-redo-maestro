@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Heart, Scissors, Sparkles, Truck } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { ProductCard } from "@/components/site/ProductCard";
-import { posts, products } from "@/lib/catalog";
+import { getCategoryByName, posts, products } from "@/lib/catalog";
 import taller from "@/assets/pingolino/taller.jpg";
 import materiales from "@/assets/pingolino/materiales.jpg";
 import bolsaPlaya from "@/assets/pingolino/bolsa-playa.jpg";
@@ -72,9 +72,10 @@ function Home() {
         <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-5">
           {cats.map((c) => {
             const p = products.find((x) => x.slug === c.slug);
-            if (!p) return null;
+            const category = getCategoryByName(c.name);
+            if (!p || !category) return null;
             return (
-              <Link key={c.name} to="/tienda" search={{ categoria: c.name }} className="group relative aspect-[3/4] overflow-hidden">
+              <Link key={c.name} to="/tienda/categoria/$categoria" params={{ categoria: category.slug }} className="group relative aspect-[3/4] overflow-hidden">
                 <img src={p.images[0]} alt={c.name} className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
                 <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/80 via-foreground/25 to-transparent p-5 pt-16 font-display text-3xl text-background">{c.name}</span>
               </Link>

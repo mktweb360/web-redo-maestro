@@ -20,6 +20,7 @@ import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as TiendaIndexRouteImport } from './routes/tienda.index'
 import { Route as TiendaSlugRouteImport } from './routes/tienda.$slug'
+import { Route as TiendaCategoriaCategoriaRouteImport } from './routes/tienda.categoria.$categoria'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -76,6 +77,12 @@ const TiendaSlugRoute = TiendaSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => TiendaRoute,
 } as any)
+const TiendaCategoriaCategoriaRoute =
+  TiendaCategoriaCategoriaRouteImport.update({
+    id: '/categoria/$categoria',
+    path: '/categoria/$categoria',
+    getParentRoute: () => TiendaRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -89,6 +96,7 @@ export interface FileRoutesByFullPath {
   '/tienda/$slug': typeof TiendaSlugRoute
   '/blog/': typeof BlogIndexRoute
   '/tienda/': typeof TiendaIndexRoute
+  '/tienda/categoria/$categoria': typeof TiendaCategoriaCategoriaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -100,6 +108,7 @@ export interface FileRoutesByTo {
   '/tienda/$slug': typeof TiendaSlugRoute
   '/blog': typeof BlogIndexRoute
   '/tienda': typeof TiendaIndexRoute
+  '/tienda/categoria/$categoria': typeof TiendaCategoriaCategoriaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -114,6 +123,7 @@ export interface FileRoutesById {
   '/tienda/$slug': typeof TiendaSlugRoute
   '/blog/': typeof BlogIndexRoute
   '/tienda/': typeof TiendaIndexRoute
+  '/tienda/categoria/$categoria': typeof TiendaCategoriaCategoriaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -129,6 +139,7 @@ export interface FileRouteTypes {
     | '/tienda/$slug'
     | '/blog/'
     | '/tienda/'
+    | '/tienda/categoria/$categoria'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -140,6 +151,7 @@ export interface FileRouteTypes {
     | '/tienda/$slug'
     | '/blog'
     | '/tienda'
+    | '/tienda/categoria/$categoria'
   id:
     | '__root__'
     | '/'
@@ -153,6 +165,7 @@ export interface FileRouteTypes {
     | '/tienda/$slug'
     | '/blog/'
     | '/tienda/'
+    | '/tienda/categoria/$categoria'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -244,6 +257,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TiendaSlugRouteImport
       parentRoute: typeof TiendaRoute
     }
+    '/tienda/categoria/$categoria': {
+      id: '/tienda/categoria/$categoria'
+      path: '/categoria/$categoria'
+      fullPath: '/tienda/categoria/$categoria'
+      preLoaderRoute: typeof TiendaCategoriaCategoriaRouteImport
+      parentRoute: typeof TiendaRoute
+    }
   }
 }
 
@@ -262,11 +282,13 @@ const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 interface TiendaRouteChildren {
   TiendaSlugRoute: typeof TiendaSlugRoute
   TiendaIndexRoute: typeof TiendaIndexRoute
+  TiendaCategoriaCategoriaRoute: typeof TiendaCategoriaCategoriaRoute
 }
 
 const TiendaRouteChildren: TiendaRouteChildren = {
   TiendaSlugRoute: TiendaSlugRoute,
   TiendaIndexRoute: TiendaIndexRoute,
+  TiendaCategoriaCategoriaRoute: TiendaCategoriaCategoriaRoute,
 }
 
 const TiendaRouteWithChildren =
