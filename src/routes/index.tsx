@@ -51,7 +51,7 @@ function Home() {
           <div className="relative aspect-[4/5] overflow-hidden rounded-t-[45%] rounded-b-[2rem] border-[10px] border-card shadow-2xl">
             <img src={hero.images[0]} alt={hero.name} className="h-full w-full object-cover transition duration-1000 hover:scale-[1.025]" />
           </div>
-          <div className="absolute -bottom-5 -right-5 grid size-28 place-items-center rounded-full bg-accent text-center text-accent-foreground shadow-xl md:size-32">
+          <div className="absolute -bottom-5 right-0 grid size-28 place-items-center rounded-full bg-accent text-center text-accent-foreground shadow-xl md:-right-5 md:size-32">
             <p className="text-[9px] font-semibold uppercase tracking-[0.18em]">Nombre<br/><span className="font-display text-xl font-medium normal-case tracking-normal">bordado</span></p>
           </div>
         </div>
