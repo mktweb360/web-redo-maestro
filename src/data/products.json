@@ -1,244 +1,247 @@
 [
- {
-  "slug": "manta-arrullo-volantes-rosa",
-  "name": "Manta arrullo con volantes",
-  "subtitle": "Algodón Waffle Rosa Empolvado",
-  "price": 29.95,
-  "category": "Mantas",
-  "available": true,
-  "personalizable": true,
-  "description": [
-   "Envuelve a tu bebé con la suavidad y el mimo que merece. Nuestra manta arrullo con volantes está confeccionada artesanalmente en tejido waffle de algodón de alta calidad combinado con muselina suave, ofreciendo el equilibrio perfecto entre confort, transpirabilidad y estilo.",
-   "Personalízala con el nombre bordado para convertirla en un recuerdo único y en un regalo perfecto para recién nacidos, baby showers o canastillas de bebé.",
-   "Su diseño elegante en color rosa empolvado con delicados volantes la convierte en una manta versátil que podrás utilizar como:",
-   "Arrullo para recién nacido.",
-   "Manta para la cuna o minicuna.",
-   "Manta para sesiones de fotos.",
-   "Manta para mantener al bebé calentito durante los paseos.",
-   "Confeccionada artesanalmente en España."
-  ],
-  "images": [
-   "/__l5e/assets-v1/49e83767-7124-461c-9e6c-40b8d348cb9a/manta-arrullo-volantes-rosa-1.jpg",
-   "/__l5e/assets-v1/cfba307d-7bce-4cea-b374-6917ed8e9a6d/manta-arrullo-volantes-rosa-2.jpg",
-   "/__l5e/assets-v1/f44bec64-c276-4d8e-9cf5-b10a62a5484d/manta-arrullo-volantes-rosa-3.jpg"
-  ]
- },
- {
-  "slug": "bolsa-playa-vichy",
-  "name": "Bolsa de playa grande vichy",
-  "subtitle": "Blanco y negro",
-  "price": 44.95,
-  "category": "Bolsos",
-  "available": true,
-  "personalizable": false,
-  "description": [
-   "Disfruta del verano con nuestra bolsa de playa grande de tela vichy blanco y negro, diseñada y confeccionada artesanalmente por Pingolino Handmade. Su amplio interior permite llevar cómodamente toallas, protector solar, ropa de cambio, juguetes o todo lo necesario para un día de playa o piscina.",
-   "Fabricada con tejidos de calidad y asas resistentes de algodón, incorpora un práctico bolsillo exterior para guardar el móvil, las llaves o pequeños accesorios y tenerlos siempre a mano. Su diseño atemporal de cuadros vichy combina con cualquier look veraniego y también es perfecta como bolso shopper, bolsa para piscina o escapadas de fin de semana.",
-   "Bolsa de playa grande y ligera.",
-   "Tejido acolchado de alta calidad.",
-   "Estampado vichy blanco y negro.",
-   "Asas largas de algodón resistentes.",
-   "Bolsillo exterior de fácil acceso.",
-   "Diseño exclusivo de Pingolino Handmade."
-  ],
-  "images": [
-   "/__l5e/assets-v1/6dadf99e-e6ed-44f8-b340-22b78b62e341/bolsa-playa-vichy-1.jpg",
-   "/__l5e/assets-v1/810f7a47-bbf1-4d64-b328-1b0c11adf6b5/bolsa-playa-vichy-2.jpg",
-   "/__l5e/assets-v1/087b0cb2-eb89-4eac-928d-30e740786cfb/bolsa-playa-vichy-3.jpg",
-   "/__l5e/assets-v1/9f7b07ed-ecab-4e55-bd59-edd5cec7201c/bolsa-playa-vichy-4.jpg"
-  ]
- },
- {
-  "slug": "mochila-infantil-algodon",
-  "name": "Mochila infantil de algodón",
-  "subtitle": "Mochila Escolar para Guardería y Educación Infantil · Bolsa para Merienda",
-  "price": 39.99,
-  "category": "Mochilas",
-  "available": true,
-  "personalizable": true,
-  "description": [
-   "Mochila infantil de algodón, ligera y perfecta para el día a día en el colegio.",
-   "Diseñada especialmente para niños de 3 a 5 años, esta mochila tiene el tamaño ideal para acompañarlos durante la etapa de Educación Infantil. Es perfecta para llevar la merienda, una botella de agua, una muda o los pequeños imprescindibles del día.",
-   "Confeccionada en algodón de alta calidad, es cómoda, resistente y fácil de llevar gracias a sus asas ajustables. Su diseño artesanal la convierte en un complemento único y práctico para el colegio, la guardería, excursiones o actividades extraescolares.",
-   "Tamaño ideal para niños de 3 a 5 años.",
-   "Ligera y cómoda para llevar a diario.",
-   "Perfecta para la merienda, botella de agua y pequeños objetos.",
-   "Ideal para guardería y Educación Infantil.",
-   "Hecha a mano con mucho mimo."
-  ],
-  "images": [
-   "/__l5e/assets-v1/e58e289e-d71b-46f2-b759-d6b04db446ba/mochila-infantil-algodon-1.jpg",
-   "/__l5e/assets-v1/7062bac1-768c-49c7-8fc1-689ee26bf5a5/mochila-infantil-algodon-2.jpg",
-   "/__l5e/assets-v1/71e5637e-bb62-45cf-9389-6b8ff4b749fb/mochila-infantil-algodon-3.jpg",
-   "/__l5e/assets-v1/2275a2ff-023b-45d9-a141-45a4e3dc2f76/mochila-infantil-algodon-4.jpg"
-  ]
- },
- {
-  "slug": "tote-bag-vichy-negra",
-  "name": "Tote bag vichy negra",
-  "subtitle": "Bolso Shopper Reutilizable Handmade",
-  "price": 22.0,
-  "category": "Bolsos",
-  "available": true,
-  "personalizable": false,
-  "description": [
-   "Descubre nuestra Tote Bag de tela vichy negra, un bolso shopper confeccionado artesanalmente por Pingolino Handmade. Ligera, resistente y versátil, es perfecta para el día a día, ir al trabajo, la universidad, hacer la compra o llevar todo lo necesario en tus salidas.",
-   "Su diseño de cuadros vichy en blanco y negro combina fácilmente con cualquier estilo, mientras que su confección artesanal garantiza un acabado cuidado y único.",
-   "Tejido de algodón con estampado vichy.",
-   "Asas largas para llevar cómodamente al hombro.",
-   "Bolsa reutilizable y sostenible.",
-   "Diseño minimalista y atemporal.",
-   "Bordado exclusivo de Pingolino Handmade.",
-   "Regalo original para amantes de los accesorios handmade."
-  ],
-  "images": [
-   "/__l5e/assets-v1/bd911627-0aba-47df-83f7-126110194179/tote-bag-vichy-negra-1.jpg"
-  ]
- },
- {
-  "slug": "manta-borreguito-75x100",
-  "name": "Manta de algodón con borreguito",
-  "subtitle": "Manta de Invierno para Cuna, Carrito y Capazo",
-  "price": 34.95,
-  "category": "Mantas",
-  "available": true,
-  "personalizable": false,
-  "description": [
-   "Mantén a tu bebé abrigado y cómodo durante los días más fríos con esta manta de algodón con interior de borreguito ultrasuave. Su tamaño de 75x100 cm es perfecto para usar en el carrito, capazo, cuna o durante los paseos de invierno.",
-   "Confeccionada con un exterior de algodón de alta calidad y un cálido reverso de borreguito, proporciona una agradable sensación de confort sin renunciar a la suavidad que la piel del bebé necesita.",
-   "Exterior de algodón suave y transpirable.",
-   "Interior de borreguito cálido y muy suave.",
-   "Ideal para bebés desde el nacimiento.",
-   "Perfecta para cuna, carrito, capazo o momentos de descanso.",
-   "Fácil de lavar y resistente al uso diario.",
-   "Un regalo ideal para recién nacidos, baby showers y futuras mamás."
-  ],
-  "images": [
-   "/__l5e/assets-v1/376edf21-8097-4ffe-9e59-d6af03ab9582/manta-borreguito-75x100-1.jpg",
-   "/__l5e/assets-v1/c3668339-88ff-480c-8e2f-17043559fa71/manta-borreguito-75x100-2.jpg",
-   "/__l5e/assets-v1/80eb2df5-7507-4e80-b7b9-33aafd0726f2/manta-borreguito-75x100-3.jpg",
-   "/__l5e/assets-v1/7ec69bc0-d3fa-4d27-9ef3-b7aaff272478/manta-borreguito-75x100-4.jpg"
-  ]
- },
- {
-  "slug": "portatoallitas-porta-panales",
-  "name": "Portatoallitas y porta pañales",
-  "subtitle": "Organizador hecho a mano",
-  "price": 23.95,
-  "category": "Paseo",
-  "available": true,
-  "personalizable": false,
-  "description": [
-   "Mantén todo organizado con nuestro portatoallitas y porta pañales para bebé, confeccionado artesanalmente con tejidos de alta calidad. Ideal para el bolso del carrito, la mochila o el cambiador. Un accesorio práctico, bonito y perfecto para tener pañales y toallitas siempre a mano. Disponible en diferentes estampados y confeccionado con mimo en España.",
-   "Descripción para la ficha del producto",
-   "Portatoallitas y Porta Pañales Artesanal para Bebé",
-   "Organiza todos los imprescindibles de tu bebé con este práctico portatoallitas y porta pañales confeccionado a mano.",
-   "Diseñado para llevar varias unidades de pañales y un paquete de toallitas, te permitirá tener todo preparado para cualquier cambio de pañal, tanto en casa como durante los paseos.",
-   "Su tamaño compacto hace que sea perfecto para guardar en el bolso maternal, la mochila o la cesta del carrito, ocupando muy poco espacio.",
-   "Hecho a mano con materiales de calidad.",
-   "Espacio para pañales y paquete de toallitas."
-  ],
-  "images": [
-   "/__l5e/assets-v1/f247afa7-3d79-4b31-afba-8bbc74cdda05/portatoallitas-porta-panales-1.jpg",
-   "/__l5e/assets-v1/062005f8-c787-447f-842b-74e64d139039/portatoallitas-porta-panales-2.jpg"
-  ]
- },
- {
-  "slug": "corona-cumpleanos-personalizada",
-  "name": "Corona de cumpleaños personalizada",
-  "subtitle": "Corona Reversible para Niños y Bebés · Con Número y Nombre Bordado",
-  "price": 22.95,
-  "category": "Celebraciones",
-  "available": true,
-  "personalizable": true,
-  "description": [
-   "Corona de cumpleaños personalizada para crear recuerdos inolvidables",
-   "Haz que cada cumpleaños sea aún más especial con nuestra corona de cumpleaños personalizada, confeccionada artesanalmente en tela de algodón y pensada para acompañar a los pequeños año tras año.",
-   "Cada corona se realiza de forma completamente artesanal, cuidando cada detalle para conseguir un accesorio bonito, cómodo y duradero que se convertirá en una tradición familiar.",
-   "Personalízala con el nombre del niño o la niña y el número del cumpleaños, creando un recuerdo único que podrás guardar para siempre.",
-   "Hecha completamente a mano.",
-   "Personalizable con nombre.",
-   "Número intercambiable mediante velcro.",
-   "Tela de algodón de alta calidad."
-  ],
-  "images": [
-   "/__l5e/assets-v1/0c36a860-e287-4797-90ce-2f6a98c1f58f/corona-cumpleanos-personalizada-1.jpg",
-   "/__l5e/assets-v1/e4df4046-90bc-4bf0-8aac-8865b11f1718/corona-cumpleanos-personalizada-2.jpg",
-   "/__l5e/assets-v1/3c87489a-4a9b-4767-adb1-dcfc9d80fb00/corona-cumpleanos-personalizada-3.jpg",
-   "/__l5e/assets-v1/be106f7f-9934-4c9d-92a5-a7e5f8ad8fa7/corona-cumpleanos-personalizada-4.jpg"
-  ]
- },
- {
-  "slug": "manta-algodon-waffle-75x100-b",
-  "name": "Manta de algodón para bebé 75x100 cm",
-  "subtitle": "Waffle y muselina · Edición bordada",
-  "price": 19.99,
-  "category": "Mantas",
-  "available": true,
-  "personalizable": false,
-  "description": [
-   "Manta de algodón para bebé 75x100 cm – Suave, transpirable y perfecta para todo el año",
-   "Envuelve a tu bebé con la máxima suavidad gracias a nuestra manta de algodón 100% de 75x100 cm, diseñada para proporcionar confort, calidez y transpirabilidad desde el nacimiento. Su elegante combinación de tejido waffle y muselina de algodón con delicados bordados la convierte en una manta práctica y con un diseño atemporal.",
-   "Su tamaño de 75x100 cm es ideal para utilizar en la cuna, minicuna, capazo, carrito o durante los momentos de descanso y lactancia. El algodón natural permite una correcta circulación del aire, ayudando a mantener una temperatura agradable durante cualquier época del año.",
-   "Cada manta está confeccionada con mimo para ofrecer un acabado de alta calidad, perfecto tanto para el uso diario como para regalar en un nacimiento o baby shower.",
-   "Tejido de algodón suave y transpirable",
-   "Combinación de muselina bordada y tejido waffle",
-   "Ideal para cuna, carrito, capazo y moisés",
-   "Apta desde el nacimiento"
-  ],
-  "images": [
-   "/__l5e/assets-v1/53a88c11-8ccb-4c44-87df-3c0615b4aae0/manta-algodon-waffle-75x100-b-1.jpg",
-   "/__l5e/assets-v1/bd56551b-fc20-4e36-8025-04284d2898cf/manta-algodon-waffle-75x100-b-2.jpg"
-  ]
- },
- {
-  "slug": "manta-algodon-waffle-75x100",
-  "name": "Manta de algodón para bebé 75x100 cm",
-  "subtitle": "Waffle y muselina de algodón",
-  "price": 19.99,
-  "category": "Mantas",
-  "available": true,
-  "personalizable": false,
-  "description": [
-   "Manta de algodón para bebé 75x100 cm – Suave, transpirable y perfecta para todo el año",
-   "Envuelve a tu bebé con la máxima suavidad gracias a nuestra manta de algodón 100% de 75x100 cm, diseñada para proporcionar confort, calidez y transpirabilidad desde el nacimiento. Su elegante combinación de tejido waffle y muselina de algodón con delicados bordados la convierte en una manta práctica y con un diseño atemporal.",
-   "Su tamaño de 75x100 cm es ideal para utilizar en la cuna, minicuna, capazo, carrito o durante los momentos de descanso y lactancia. El algodón natural permite una correcta circulación del aire, ayudando a mantener una temperatura agradable durante cualquier época del año.",
-   "Cada manta está confeccionada con mimo para ofrecer un acabado de alta calidad, perfecto tanto para el uso diario como para regalar en un nacimiento o baby shower.",
-   "Tejido de algodón suave y transpirable",
-   "Combinación de muselina bordada y tejido waffle",
-   "Ideal para cuna, carrito, capazo y moisés",
-   "Apta desde el nacimiento"
-  ],
-  "images": [
-   "/__l5e/assets-v1/79239b97-72d0-4546-a482-1c6e435260a2/manta-algodon-waffle-75x100-1.jpg",
-   "/__l5e/assets-v1/8e9b1e70-1be0-42e0-863c-033b9c3429a1/manta-algodon-waffle-75x100-2.jpg",
-   "/__l5e/assets-v1/47262e0c-ddc3-4882-8918-4a0371ff3b2f/manta-algodon-waffle-75x100-3.jpg",
-   "/__l5e/assets-v1/d1aa5217-4b4b-4940-848d-5d46aa1da4a3/manta-algodon-waffle-75x100-4.jpg"
-  ]
- },
- {
-  "slug": "neceser-vichy-amarillo",
-  "name": "Neceser con nombre bordado",
-  "subtitle": "Tela Vichy Amarilla",
-  "price": 19.95,
-  "category": "Neceseres",
-  "available": false,
-  "personalizable": true,
-  "description": [
-   "Organiza todos los imprescindibles con este precioso neceser personalizado con nombre bordado, confeccionado artesanalmente en tela de cuadros vichy amarillos. Perfecto para guardar pañales, toallitas, productos de higiene, maquillaje o accesorios, convirtiéndose en un regalo único y práctico para bebés, niños y adultos.",
-   "Cada neceser está elaborado a mano con materiales de calidad y personalizado con el nombre que elijas, creando una pieza exclusiva que acompañará durante años.",
-   "Personalizado con nombre bordado.",
-   "Confeccionado a mano en España.",
-   "Tela de algodón estampado vichy amarillo.",
-   "Interior amplio y práctico.",
-   "Cierre de cremallera resistente.",
-   "Ideal como regalo de nacimiento, bautizo, cumpleaños o para mamás."
-  ],
-  "images": [
-   "/__l5e/assets-v1/c2046010-db7f-491a-87e2-36baedb4f3b9/neceser-vichy-amarillo-1.jpg",
-   "/__l5e/assets-v1/b01f8a74-7d4f-4c6e-8767-4481a89b1451/neceser-vichy-amarillo-2.jpg",
-   "/__l5e/assets-v1/9bc48def-644d-479d-b3d3-16d51decb575/neceser-vichy-amarillo-3.jpg",
-   "/__l5e/assets-v1/5ef04a1b-a0cf-403b-b849-75f1a23e65db/neceser-vichy-amarillo-4.jpg"
-  ]
- }
+  {
+    "slug": "manta-arrullo-volantes-rosa",
+    "name": "Manta arrullo con volantes",
+    "subtitle": "Algodón Waffle Rosa Empolvado",
+    "price": 29.95,
+    "category": "Mantas",
+    "available": true,
+    "personalizable": true,
+    "description": [
+      "Envuelve a tu bebé con la suavidad y el mimo que merece. Nuestra manta arrullo con volantes está confeccionada artesanalmente en tejido waffle de algodón de alta calidad combinado con muselina suave, ofreciendo el equilibrio perfecto entre confort, transpirabilidad y estilo.",
+      "Personalízala con el nombre bordado para convertirla en un recuerdo único y en un regalo perfecto para recién nacidos, baby showers o canastillas de bebé.",
+      "Su diseño elegante en color rosa empolvado con delicados volantes la convierte en una manta versátil que podrás utilizar como:",
+      "Arrullo para recién nacido.",
+      "Manta para la cuna o minicuna.",
+      "Manta para sesiones de fotos.",
+      "Manta para mantener al bebé calentito durante los paseos.",
+      "Confeccionada artesanalmente en España."
+    ],
+    "images": [
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/991DF3DA-B214-4212-BFE0-8F76D81F4C35.jpg?v=1782599749",
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/F54A28CD-D1FF-40F3-9DE8-839B93BCF1C0.jpg?v=1782599445",
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/FE3D85DB-F02B-46C1-ACA6-CA9685CAAABA.jpg?v=1782599830"
+    ]
+  },
+  {
+    "slug": "bolsa-playa-vichy",
+    "name": "Bolsa de playa grande vichy",
+    "subtitle": "Blanco y negro",
+    "price": 44.95,
+    "category": "Bolsos",
+    "available": true,
+    "personalizable": false,
+    "description": [
+      "Disfruta del verano con nuestra bolsa de playa grande de tela vichy blanco y negro, diseñada y confeccionada artesanalmente por Pingolino Handmade. Su amplio interior permite llevar cómodamente toallas, protector solar, ropa de cambio, juguetes o todo lo necesario para un día de playa o piscina.",
+      "Fabricada con tejidos de calidad y asas resistentes de algodón, incorpora un práctico bolsillo exterior para guardar el móvil, las llaves o pequeños accesorios y tenerlos siempre a mano. Su diseño atemporal de cuadros vichy combina con cualquier look veraniego y también es perfecta como bolso shopper, bolsa para piscina o escapadas de fin de semana.",
+      "Bolsa de playa grande y ligera.",
+      "Tejido acolchado de alta calidad.",
+      "Estampado vichy blanco y negro.",
+      "Asas largas de algodón resistentes.",
+      "Bolsillo exterior de fácil acceso.",
+      "Diseño exclusivo de Pingolino Handmade."
+    ],
+    "images": [
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/IMG_1755.jpg?v=1782411580",
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/A95B9F22-2310-4506-B606-4E7408B85FDB.jpg?v=1782429241",
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/E20DE2DD-69FE-4136-86C7-2EF884255996.jpg?v=1782429237",
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/08033F9A-2173-4426-BADD-9D18F7E3E808.jpg?v=1782429241"
+    ]
+  },
+  {
+    "slug": "mochila-infantil-algodon",
+    "name": "Mochila infantil de algodón",
+    "subtitle": "Mochila Escolar para Guardería y Educación Infantil · Bolsa para Merienda",
+    "price": 39.99,
+    "category": "Mochilas",
+    "available": true,
+    "personalizable": true,
+    "description": [
+      "Mochila infantil de algodón, ligera y perfecta para el día a día en el colegio.",
+      "Diseñada especialmente para niños de 3 a 5 años, esta mochila tiene el tamaño ideal para acompañarlos durante la etapa de Educación Infantil. Es perfecta para llevar la merienda, una botella de agua, una muda o los pequeños imprescindibles del día.",
+      "Confeccionada en algodón de alta calidad, es cómoda, resistente y fácil de llevar gracias a sus asas ajustables. Su diseño artesanal la convierte en un complemento único y práctico para el colegio, la guardería, excursiones o actividades extraescolares.",
+      "Tamaño ideal para niños de 3 a 5 años.",
+      "Ligera y cómoda para llevar a diario.",
+      "Perfecta para la merienda, botella de agua y pequeños objetos.",
+      "Ideal para guardería y Educación Infantil.",
+      "Hecha a mano con mucho mimo."
+    ],
+    "images": [
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/65A8FBB3-D63D-4BB4-8831-3C9D72FEAAE9.jpg?v=1782316860",
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/0E78BCF7-8D89-4A0F-A1C6-B63CF3C9C1D1.jpg?v=1782316707",
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/4B52508E-3638-4DE3-A351-D9AA6CA674C1.jpg?v=1782316707",
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/01009F0C-E3EB-4E1A-8FBC-082B636B21E3.jpg?v=1782316709",
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/A1196423-4801-4502-8F8E-C8797E68B6EB.jpg?v=1782316707"
+    ]
+  },
+  {
+    "slug": "tote-bag-vichy-negra",
+    "name": "Tote bag vichy negra",
+    "subtitle": "Bolso Shopper Reutilizable Handmade",
+    "price": 22.0,
+    "category": "Bolsos",
+    "available": true,
+    "personalizable": false,
+    "description": [
+      "Descubre nuestra Tote Bag de tela vichy negra, un bolso shopper confeccionado artesanalmente por Pingolino Handmade. Ligera, resistente y versátil, es perfecta para el día a día, ir al trabajo, la universidad, hacer la compra o llevar todo lo necesario en tus salidas.",
+      "Su diseño de cuadros vichy en blanco y negro combina fácilmente con cualquier estilo, mientras que su confección artesanal garantiza un acabado cuidado y único.",
+      "Tejido de algodón con estampado vichy.",
+      "Asas largas para llevar cómodamente al hombro.",
+      "Bolsa reutilizable y sostenible.",
+      "Diseño minimalista y atemporal.",
+      "Bordado exclusivo de Pingolino Handmade.",
+      "Regalo original para amantes de los accesorios handmade."
+    ],
+    "images": [
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/IMG-0591.png?v=1782258235"
+    ]
+  },
+  {
+    "slug": "manta-borreguito-75x100",
+    "name": "Manta de algodón con borreguito",
+    "subtitle": "Manta de Invierno para Cuna, Carrito y Capazo",
+    "price": 34.95,
+    "category": "Mantas",
+    "available": true,
+    "personalizable": false,
+    "description": [
+      "Mantén a tu bebé abrigado y cómodo durante los días más fríos con esta manta de algodón con interior de borreguito ultrasuave. Su tamaño de 75x100 cm es perfecto para usar en el carrito, capazo, cuna o durante los paseos de invierno.",
+      "Confeccionada con un exterior de algodón de alta calidad y un cálido reverso de borreguito, proporciona una agradable sensación de confort sin renunciar a la suavidad que la piel del bebé necesita.",
+      "Exterior de algodón suave y transpirable.",
+      "Interior de borreguito cálido y muy suave.",
+      "Ideal para bebés desde el nacimiento.",
+      "Perfecta para cuna, carrito, capazo o momentos de descanso.",
+      "Fácil de lavar y resistente al uso diario.",
+      "Un regalo ideal para recién nacidos, baby showers y futuras mamás."
+    ],
+    "images": [
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/0F16501E-7F43-4154-AD60-76939AD46AFC.jpg?v=1782142363",
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/906ADFC9-25C5-4D0C-AACA-32908EBA8EBE.jpg?v=1782142426",
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/85E4699E-B2B5-4E4F-98BD-DFC5B8132F03.jpg?v=1782141953",
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/33EAC580-C6EC-4201-B7D6-1DBD5A806078.jpg?v=1782142490"
+    ]
+  },
+  {
+    "slug": "portatoallitas-porta-panales",
+    "name": "Portatoallitas y porta pañales",
+    "subtitle": "Organizador hecho a mano",
+    "price": 23.95,
+    "category": "Paseo",
+    "available": true,
+    "personalizable": false,
+    "description": [
+      "Mantén todo organizado con nuestro portatoallitas y porta pañales para bebé, confeccionado artesanalmente con tejidos de alta calidad. Ideal para el bolso del carrito, la mochila o el cambiador. Un accesorio práctico, bonito y perfecto para tener pañales y toallitas siempre a mano. Disponible en diferentes estampados y confeccionado con mimo en España.",
+      "Descripción para la ficha del producto",
+      "Portatoallitas y Porta Pañales Artesanal para Bebé",
+      "Organiza todos los imprescindibles de tu bebé con este práctico portatoallitas y porta pañales confeccionado a mano.",
+      "Diseñado para llevar varias unidades de pañales y un paquete de toallitas, te permitirá tener todo preparado para cualquier cambio de pañal, tanto en casa como durante los paseos.",
+      "Su tamaño compacto hace que sea perfecto para guardar en el bolso maternal, la mochila o la cesta del carrito, ocupando muy poco espacio.",
+      "Hecho a mano con materiales de calidad.",
+      "Espacio para pañales y paquete de toallitas."
+    ],
+    "images": [
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/4C963BFD-A163-4A01-8B13-2C8A38CEC7C5.jpg?v=1782140828",
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/BD9A9BE8-FE98-4078-9AA2-AA9031455C6B.jpg?v=1782140955"
+    ]
+  },
+  {
+    "slug": "corona-cumpleanos-personalizada",
+    "name": "Corona de cumpleaños personalizada",
+    "subtitle": "Corona Reversible para Niños y Bebés · Con Número y Nombre Bordado",
+    "price": 22.95,
+    "category": "Celebraciones",
+    "available": true,
+    "personalizable": true,
+    "description": [
+      "Corona de cumpleaños personalizada para crear recuerdos inolvidables",
+      "Haz que cada cumpleaños sea aún más especial con nuestra corona de cumpleaños personalizada, confeccionada artesanalmente en tela de algodón y pensada para acompañar a los pequeños año tras año.",
+      "Cada corona se realiza de forma completamente artesanal, cuidando cada detalle para conseguir un accesorio bonito, cómodo y duradero que se convertirá en una tradición familiar.",
+      "Personalízala con el nombre del niño o la niña y el número del cumpleaños, creando un recuerdo único que podrás guardar para siempre.",
+      "Hecha completamente a mano.",
+      "Personalizable con nombre.",
+      "Número intercambiable mediante velcro.",
+      "Tela de algodón de alta calidad."
+    ],
+    "images": [
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/8059EC03-0B8C-4EC1-9ECA-F9F0B6B942AD.jpg?v=1782092902",
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/3A2498D1-D069-4C90-8E0C-B7D24583EAD9.jpg?v=1782126959",
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/121AB3A0-BACB-4045-9F3F-836AB478084B.jpg?v=1782126959",
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/B714F467-00CC-4A3E-85C8-0CBE69C846CD.jpg?v=1782126959",
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/171C212C-BE63-4C2B-BA3B-474DFD8BBF20.jpg?v=1782126960"
+    ]
+  },
+  {
+    "slug": "manta-algodon-waffle-75x100-b",
+    "name": "Manta de algodón para bebé 75x100 cm",
+    "subtitle": "Waffle y muselina · Edición bordada",
+    "price": 19.99,
+    "category": "Mantas",
+    "available": true,
+    "personalizable": false,
+    "description": [
+      "Manta de algodón para bebé 75x100 cm – Suave, transpirable y perfecta para todo el año",
+      "Envuelve a tu bebé con la máxima suavidad gracias a nuestra manta de algodón 100% de 75x100 cm, diseñada para proporcionar confort, calidez y transpirabilidad desde el nacimiento. Su elegante combinación de tejido waffle y muselina de algodón con delicados bordados la convierte en una manta práctica y con un diseño atemporal.",
+      "Su tamaño de 75x100 cm es ideal para utilizar en la cuna, minicuna, capazo, carrito o durante los momentos de descanso y lactancia. El algodón natural permite una correcta circulación del aire, ayudando a mantener una temperatura agradable durante cualquier época del año.",
+      "Cada manta está confeccionada con mimo para ofrecer un acabado de alta calidad, perfecto tanto para el uso diario como para regalar en un nacimiento o baby shower.",
+      "Tejido de algodón suave y transpirable",
+      "Combinación de muselina bordada y tejido waffle",
+      "Ideal para cuna, carrito, capazo y moisés",
+      "Apta desde el nacimiento"
+    ],
+    "images": [
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/160AF27C-6597-4427-8D13-158CF27AD49D.jpg?v=1782092589",
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/4A1A5A24-F429-46DF-B7F2-EE65D336F143.jpg?v=1782092503"
+    ]
+  },
+  {
+    "slug": "manta-algodon-waffle-75x100",
+    "name": "Manta de algodón para bebé 75x100 cm",
+    "subtitle": "Waffle y muselina de algodón",
+    "price": 19.99,
+    "category": "Mantas",
+    "available": true,
+    "personalizable": false,
+    "description": [
+      "Manta de algodón para bebé 75x100 cm – Suave, transpirable y perfecta para todo el año",
+      "Envuelve a tu bebé con la máxima suavidad gracias a nuestra manta de algodón 100% de 75x100 cm, diseñada para proporcionar confort, calidez y transpirabilidad desde el nacimiento. Su elegante combinación de tejido waffle y muselina de algodón con delicados bordados la convierte en una manta práctica y con un diseño atemporal.",
+      "Su tamaño de 75x100 cm es ideal para utilizar en la cuna, minicuna, capazo, carrito o durante los momentos de descanso y lactancia. El algodón natural permite una correcta circulación del aire, ayudando a mantener una temperatura agradable durante cualquier época del año.",
+      "Cada manta está confeccionada con mimo para ofrecer un acabado de alta calidad, perfecto tanto para el uso diario como para regalar en un nacimiento o baby shower.",
+      "Tejido de algodón suave y transpirable",
+      "Combinación de muselina bordada y tejido waffle",
+      "Ideal para cuna, carrito, capazo y moisés",
+      "Apta desde el nacimiento"
+    ],
+    "images": [
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/C4D6F65C-2CC7-455C-A32C-AFC0B132CE3B.jpg?v=1782092236",
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/6DC52FEE-878B-4D71-8B90-59A6646C852B.jpg?v=1782091822",
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/96E75CD6-D2EB-4034-9E90-1C12392368AE.jpg?v=1782091823",
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/6F48E5EA-77CA-4332-9DF5-A13F91564E55.jpg?v=1782091822"
+    ]
+  },
+  {
+    "slug": "neceser-vichy-amarillo",
+    "name": "Neceser con nombre bordado",
+    "subtitle": "Tela Vichy Amarilla",
+    "price": 19.95,
+    "category": "Neceseres",
+    "available": false,
+    "personalizable": true,
+    "description": [
+      "Organiza todos los imprescindibles con este precioso neceser personalizado con nombre bordado, confeccionado artesanalmente en tela de cuadros vichy amarillos. Perfecto para guardar pañales, toallitas, productos de higiene, maquillaje o accesorios, convirtiéndose en un regalo único y práctico para bebés, niños y adultos.",
+      "Cada neceser está elaborado a mano con materiales de calidad y personalizado con el nombre que elijas, creando una pieza exclusiva que acompañará durante años.",
+      "Personalizado con nombre bordado.",
+      "Confeccionado a mano en España.",
+      "Tela de algodón estampado vichy amarillo.",
+      "Interior amplio y práctico.",
+      "Cierre de cremallera resistente.",
+      "Ideal como regalo de nacimiento, bautizo, cumpleaños o para mamás."
+    ],
+    "images": [
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/ED83E69D-8F69-4EF5-85D9-3B49107FD0EB.jpg?v=1782518445",
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/C8E65573-1BD5-4E9D-BF6D-61FE2115E8F1.jpg?v=1782518339",
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/A1E74DD8-6641-4161-881B-F6EF721E6624.jpg?v=1782518339",
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/D89B469B-4AEC-4841-B283-F4A8F0607884.jpg?v=1782518339",
+      "https://cdn.shopify.com/s/files/1/1057/5659/0425/files/2FFDDA57-0C68-412B-85EE-542AE07FFDF4.jpg?v=1782518339"
+    ]
+  }
 ]

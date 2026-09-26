@@ -1,49 +1,54 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight, Clock3 } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { posts } from "@/lib/catalog";
 
 export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
-      { title: "Blog — Pingolino Handmade" },
-      { name: "description", content: "Guías, ideas de regalo y el día a día de nuestro taller de costura artesanal." },
-      { property: "og:title", content: "Blog — Pingolino Handmade" },
-      { property: "og:description", content: "Historias del taller, guías de tejidos e ideas para regalar." },
+      { title: "El diario — Pingolino Handmade" },
+      { name: "description", content: "Ideas prácticas para la llegada de un bebé, el día a día con peques y los regalos que se recuerdan." },
+      { property: "og:title", content: "El diario — Pingolino Handmade" },
+      { property: "og:description", content: "Guías de maternidad, paseo y pequeños regalos que acompañan." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/blog" }],
   }),
   component: Blog,
 });
 
 function Blog() {
-  const first = posts[0];
-  if (!first) return null;
-  const rest = posts.slice(1);
+  const [lead, ...rest] = posts;
   return (
     <SiteLayout>
-      <section className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
-        <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-accent">Notas, tejidos y cuidados</p>
-        <h1 className="mt-3 font-display text-6xl leading-none md:text-8xl">Diario del taller</h1>
-        <p className="mt-5 max-w-xl text-lg text-muted-foreground">Guías prácticas, ideas para regalar y lo que pasa entre hilos y tejidos.</p>
-        <Link to="/blog/$slug" params={{ slug: first.slug }} className="group mt-14 grid items-center gap-10 border-y border-border py-10 md:grid-cols-[1.15fr_.85fr]">
-          <img src={first.image} alt={first.title} className="aspect-[4/3] w-full object-cover transition duration-1000 group-hover:scale-[1.015]" />
-          <div className="md:px-6">
-            <p className="text-xs uppercase tracking-widest text-accent">{first.category} · {first.readTime}</p>
-            <h2 className="mt-3 font-display text-5xl leading-tight group-hover:text-primary">{first.title}</h2>
-            <p className="mt-4 text-muted-foreground">{first.excerpt}</p>
-            <p className="mt-6 text-sm underline underline-offset-4">Leer artículo</p>
+      <section className="bg-secondary">
+        <div className="mx-auto max-w-[1440px] px-5 py-12 sm:px-8 md:py-16 lg:px-12">
+          <p className="section-kicker">Maternidad · paseo · cosas hechas despacio</p>
+          <div className="mt-4 grid items-end gap-5 md:grid-cols-[1fr_.52fr] md:gap-10">
+            <h1 className="font-display text-6xl leading-[0.81] tracking-tight sm:text-7xl md:text-8xl">El diario<br /><i className="font-medium text-primary">Pingolino.</i></h1>
+            <p className="max-w-md pb-1 text-sm leading-[1.8] text-muted-foreground sm:text-base">Un rinconcito con ideas prácticas, guías para cada etapa y cosas que hemos aprendido entre puntadas.</p>
+          </div>
+        </div>
+      </section>
+      {lead && <section className="mx-auto max-w-[1440px] px-5 py-10 sm:px-8 md:py-14 lg:px-12">
+        <Link to="/blog/$slug" params={{ slug: lead.slug }} className="group grid overflow-hidden bg-card md:grid-cols-[1.08fr_.92fr]">
+          <div className="grid aspect-[1.2/1] place-items-center overflow-hidden bg-background p-3 sm:p-6"><img src={lead.image} alt="" className="h-full w-full object-contain transition-transform duration-700 group-hover:scale-[1.025]" /></div>
+          <div className="flex flex-col justify-center px-6 py-8 sm:px-10 md:px-12 md:py-12">
+            <span className="text-[9px] font-semibold uppercase tracking-[0.17em] text-accent">Para empezar · {lead.category}</span>
+            <h2 className="mt-4 font-display text-4xl leading-[0.94] tracking-tight sm:text-5xl">{lead.title}</h2>
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">{lead.excerpt}</p>
+            <span className="mt-7 inline-flex items-center gap-2 text-[9px] font-semibold uppercase tracking-[0.14em]">Leer artículo <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" /></span>
           </div>
         </Link>
-        <div className="mt-16 grid gap-10 md:grid-cols-2">
-          {rest.map((p) => (
-            <Link key={p.slug} to="/blog/$slug" params={{ slug: p.slug }} className="group">
-              <img src={p.image} alt={p.title} className="aspect-[16/10] w-full object-cover" />
-              <p className="mt-4 text-xs uppercase tracking-widest text-accent">{p.category} · {p.date}</p>
-              <h2 className="mt-2 font-display text-3xl group-hover:text-primary">{p.title}</h2>
-              <p className="mt-2 text-sm text-muted-foreground">{p.excerpt}</p>
-            </Link>
-          ))}
+      </section>}
+      <section className="mx-auto max-w-[1440px] px-5 pb-16 sm:px-8 md:pb-24 lg:px-12">
+        <div className="flex items-center justify-between border-b border-border pb-4"><p className="section-kicker">Notas para guardar</p><p className="text-[9px] uppercase tracking-[0.13em] text-muted-foreground">{posts.length} lecturas</p></div>
+        <div className="mt-7 grid gap-6 md:grid-cols-2">
+          {rest.map((post) => <Link key={post.slug} to="/blog/$slug" params={{ slug: post.slug }} className="group grid grid-cols-[.9fr_1.1fr] gap-4 border-b border-border pb-6 sm:gap-6">
+            <div className="grid aspect-[4/3] place-items-center overflow-hidden bg-secondary p-2"><img src={post.image} alt="" className="h-full w-full object-contain transition-transform duration-700 group-hover:scale-[1.025]" loading="lazy" /></div>
+            <div className="flex flex-col justify-center"><p className="text-[9px] font-semibold uppercase tracking-[0.16em] text-accent">{post.category} · {post.date}</p><h2 className="mt-2 font-display text-2xl leading-[0.98] sm:text-3xl">{post.title}</h2><p className="mt-2 line-clamp-3 text-xs leading-relaxed text-muted-foreground">{post.excerpt}</p><span className="mt-3 flex items-center gap-1.5 text-[9px] uppercase tracking-[0.1em] text-muted-foreground"><Clock3 size={12} /> {post.readTime}</span></div>
+          </Link>)}
         </div>
       </section>
     </SiteLayout>

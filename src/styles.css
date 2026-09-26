@@ -312,3 +312,29 @@
 @media (prefers-reduced-motion: no-preference) {
   .reveal-up { animation: reveal-up .7s ease-out both; }
 }
+
+
+@layer base {
+  :focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
+  ::selection { background: var(--cover-accent); color: var(--foreground); }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  }
+}
+
+@layer components {
+  .eyebrow-label { @apply flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground; }
+  .eyebrow-dot { @apply inline-block size-1.5 rounded-full bg-accent; }
+  .section-kicker { @apply text-[9px] font-semibold uppercase tracking-[0.2em] text-accent; }
+  .section-heading-row { @apply flex flex-col justify-between gap-5 md:flex-row md:items-end; }
+  .nav-link { position: relative; }
+  .nav-link::after { content: ""; position: absolute; right: 0; bottom: 2px; left: 0; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform 180ms cubic-bezier(.23,1,.32,1); }
+  .nav-link:hover::after { transform: scaleX(1); }
+  .hero-photo-frame { box-shadow: 0 22px 60px -42px color-mix(in oklch, var(--foreground) 32%, transparent); }
+  .product-card-image img { will-change: transform; }
+  .editorial-story img { will-change: transform; }
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal-up { animation: reveal-up 650ms cubic-bezier(.23,1,.32,1) both; }
+  }
+  @keyframes reveal-up { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+}
