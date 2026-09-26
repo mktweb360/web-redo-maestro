@@ -299,7 +299,3 @@
 }
 
 @media (prefers-reduced-motion: reduce) { .slide { animation: none; } .progress-bar { transition: none; } }
-
-@utility font-display {
-  font-family: var(--font-display);
-}
