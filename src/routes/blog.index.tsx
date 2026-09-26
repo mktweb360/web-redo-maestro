@@ -17,7 +17,8 @@ export const Route = createFileRoute("/blog/")({
 });
 
 function Blog() {
-  const [first, ...rest] = posts;
+  const first = posts[0]!;
+  const rest = posts.slice(1);
   return (
     <SiteLayout>
       <section className="mx-auto max-w-7xl px-5 py-14">
